@@ -12,9 +12,6 @@
   "dependencies": {
     "@base-cms/marko-core": "^1.38.0",
     "@base-cms/marko-newsletters": "^1.39.0",
-    "@base-cms/marko-newsletters-email-x": "^1.41.0",
-    "@base-cms/marko-newsletters-omail": "^1.37.0",
-    "@base-cms/object-path": "^1.37.0",
-    "graphql-tag": "^2.10.1"
+    "@base-cms/marko-newsletters-email-x": "^1.41.0"
   }
 }
