@@ -1,4 +1,7 @@
 {
+  "<common-header-block>": {
+    "template": "./header.marko"
+  },
   "<common-footer-block>": {
     "template": "./footer.marko"
   },
