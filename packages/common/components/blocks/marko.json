@@ -1,4 +1,7 @@
 {
+  "<common-footer-block>": {
+    "template": "./footer.marko"
+  },
   "<common-view-online-block>": {
     "template": "./view-online.marko"
   }
