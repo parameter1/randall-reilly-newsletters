@@ -1,4 +1,7 @@
 {
+  "taglib-imports": [
+    "./content/marko.json"
+  ],
   "<common-head-block>": {
     "template": "./head.marko"
   },
