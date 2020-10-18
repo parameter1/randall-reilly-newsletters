@@ -1,0 +1,405 @@
+import queryFragment from "@randall-reilly/package-common/graphql/fragments/content-list";
+import emailX from "../config/email-x";
+
+$ const { website, config } = out.global;
+$ const { newsletter, date } = data;
+
+<marko-newsletter-root
+  title=newsletter.name
+  description=newsletter.description
+  date=date
+>
+  <@head>
+    <common-head-block />
+  </@head>
+  <@body style="padding:0; margin:0;font-family: 'Roboto', sans-serif, arial; -webkit-text-size-adjust:100%;">
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td align="center" valign="top">
+            <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="wrap000">
+              <tbody>
+                <tr>
+                  <td align="center" valign="top">
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tbody>
+
+                        <!-- View online block -->
+                        <common-view-online-block />
+
+                        <!-- Header block -->
+                        <common-header-block
+                          date=date
+                          newsletter=newsletter
+                        />
+
+                        <!-- Announcement block -->
+                        <common-content-announcement-block
+                          date=date
+                          section-name="Announcement"
+                          newsletter=newsletter
+                        />
+
+                        <!-- Sponsored by block-->
+                        <common-ad-wrapper-block
+                          date=date
+                          section-name="Ad Slot 1"
+                          newsletter=newsletter
+                          promotion-component="sponsored-block"
+                          ad-unit=emailX.getAdUnit({ name: "ad-slot-1", alias: newsletter.alias })
+                        />
+
+
+                        <!-- Begin content feed -->
+
+
+                        <!--Lead story block-->
+                        <common-content-list-block
+                          date=date
+                          section-name="Featured"
+                          newsletter=newsletter
+                          with-image=true
+                          limit=1
+                        />
+
+                        <!-- Advertisement / Promotion block -->
+                        <common-ad-wrapper-block
+                          date=date
+                          section-name="Ad Slot 2"
+                          newsletter=newsletter
+                          promotion-component="advertisement-block"
+                          ad-unit=emailX.getAdUnit({ name: "ad-slot-2", alias: newsletter.alias })
+                        />
+
+                        <!-- Content list block (no image) -->
+                        <common-content-list-block
+                          date=date
+                          section-name="Main"
+                          newsletter=newsletter
+                          with-image=false
+                          limit=2
+                          skip=0
+                        />
+
+                        <!-- 7th block -->
+                        <tr>
+                          <td align="center" valign="top" dir="rtl">
+                            <table width="580" border="0" align="center" cellpadding="0" cellspacing="0" class="wrap003">
+                              <common-table-spacer-element height="10" />
+                              <tr>
+                                <td align="left" valign="middle" style="font-size:15px;line-height:20px; color:#666666;font-weight:400;letter-spacing: -0.2px;text-align: center;">Advertisement</td>
+                              </tr>
+                              <common-table-spacer-element height="10" />
+                              <tr>
+                                <td align="center" valign="top">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <common-table-spacer-element height="10" />
+                                    <tr>
+                                      <td align="right" valign="top" width="328" class="split_cont1">
+                                        <a href="#" style="display: block; font-size: 0; line-height: 0;">
+                                        <img src="https://wfh1020.upupload.com/70568/u0pno91yzf70568/images/small-img2.png" width="316" height="210" alt="img" style="font-size: 0; line-height: 0; border: 0;" class="img_resize2"></a>
+                                      </td>
+                                      <td align="left" valign="top" class="split_cont1">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                          <tr>
+                                            <td align="left" valign="top">
+                                              <a href="#" style="display: block; font-size: 0; line-height: 0;">
+                                                <img src="https://wfh1020.upupload.com/70568/u0pno91yzf70568/images/smart.png" width="110" height="43" alt="img" style="font-size: 0; line-height: 0; border: 0;">
+                                              </a>
+                                            </td>
+                                          </tr>
+                                          <common-table-spacer-element height="6" />
+                                          <tr>
+                                            <td align="left" valign="top" style="font-size:17px;line-height:22px; color:#202022;font-weight:400;letter-spacing: -0.3px;">We're on a mission to arm truckers with the information, technology, and know-how to take control of their business and feel the freedom of being an independent owner-operator again.</td>
+                                          </tr>
+                                          <common-table-spacer-element height="4" />
+                                          <tr>
+                                            <td align="left" valign="top" style="font-size:17px;line-height:23px; color:#3475b6;font-weight:400;letter-spacing: 0.2px;">Learn more at<a href="smarthopdispatching.com" target="_blank" style="text-decoration: none;color: #3475b6;"> smarthopdispatching.com </a></td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <common-table-hr-element height="17" />
+                            </table>
+                          </td>
+                        </tr>
+
+
+                        <!--8th block-->
+                        <tr>
+                          <td align="center" valign="top">
+                            <table width="580" border="0" align="center" cellpadding="0" cellspacing="0" class="wrap003">
+                              <common-table-spacer-element height="30" />
+                              <tr>
+                                <td align="left" valign="top" style="font-size:13px;line-height:19px; color:#277c80;font-weight:400;letter-spacing: 0px;">NEWS</td>
+                              </tr>
+                              <common-table-spacer-element height="3" />
+                              <tr>
+                                <td align="left" valign="top" style="font-size:22px;line-height:28px; color:#202022;font-weight:700;letter-spacing: 0.2px;">PrePass Adds Safety Alerts For Drivers To App</td>
+                              </tr>
+                              <common-table-spacer-element height="5" />
+                              <tr>
+                                <td align="left" valign="middle" style="font-size:17px;line-height:23px; color:#202022;font-weight:400;letter-spacing: 0.1px;">The PrePass Motion app will alert drivers of steep grades, gusty winds, runaway truck ramps, work zones, truck parking availability, rest areas... </td>
+                              </tr>
+                              <common-table-spacer-element height="30" />
+                              <tr>
+                                <td align="left" valign="top" style="font-size:13px;line-height:19px; color:#277c80;font-weight:400;letter-spacing: 0px;">NEWS  </td>
+                              </tr>
+                              <common-table-spacer-element height="3" />
+                              <tr>
+                                <td align="left" valign="top" style="font-size:22px;line-height:25px; color:#202022;font-weight:700;letter-spacing: 0.2px;">Truckers Honored This Week With Recognition, Deals </td>
+                              </tr>
+                              <common-table-spacer-element height="5" />
+                              <tr>
+                                <td align="left" valign="middle" style="font-size:17px;line-height:23px; color:#202022;font-weight:400;letter-spacing: 0.1px;">National Truck Driver Appreciation Week kicked off Sunday, Sept. 13, and throughout the week this week, companies will be honoring truck drivers... </td>
+                              </tr>
+                              <common-table-spacer-element height="29" />
+                              <tr>
+                                <td align="left" valign="top" style="font-size:13px;line-height:19px; color:#a91b20;font-weight:400;letter-spacing: 0px;">SPONSORED CONTENT BY VERIZON CONNECT </td>
+                              </tr>
+                              <common-table-spacer-element height="3" />
+                              <tr>
+                                <td align="left" valign="top" style="font-size:22px;line-height:28px; color:#202022;font-weight:700;letter-spacing: 0.2px;">Beck Trucking saves time with improved communication and visibility with Reveal</td>
+                              </tr>
+                              <common-table-spacer-element height="0" />
+                              <tr>
+                                <td align="left" valign="middle" style="font-size:17px;line-height:23px; color:#202022;font-weight:400;letter-spacing: 0.1px;">With a rapidly growing trucking company, Nick Beck, Owner of Beck Trucking, knew he had to implement technology to streamline communication with drivers and customers.  </td>
+                              </tr>
+                              <common-table-spacer-element height="28" />
+                              <tr>
+                                <td align="left" valign="top" style="font-size:13px;line-height:19px; color:#277c80;font-weight:400;letter-spacing: 0px;">INSPECTIONS  </td>
+                              </tr>
+                              <common-table-spacer-element height="3" />
+                              <tr>
+                                <td align="left" valign="top" style="font-size:22px;line-height:25px; color:#202022;font-weight:700;letter-spacing: 0.2px;">POLL: How Did You Prep For The Roadcheck Inspection Event This Year?</td>
+                              </tr>
+                              <common-table-spacer-element height="5" />
+                              <tr>
+                                <td align="left" valign="middle" style="font-size:17px;line-height:23px; color:#202022;font-weight:400;letter-spacing: 0.1px;">National Truck Driver Appreciation Week kicked off Sunday, Sept. 13, and throughout the week this week, companies will be honoring truck drivers... </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+
+
+                        <!-- 9th block-->
+                        <tr>
+                            <td align="center" valign="top">
+                              <table width="100%" border="0" align="center"  cellpadding="0" cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                        <td align="center" valign="top" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="middle" style="font-size:15px;line-height:20px; color:#666666;font-weight:400;letter-spacing: -0.2px;text-align: center;">
+                                          Advertisement
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" valign="top" height="2" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" valign="top" class="mobile1">
+                                          <a href="#">
+                                          <img src="https://wfh1020.upupload.com/70568/u0pno91yzf70568/images/bg-img1.png" width="590" height="430" alt="banner" class="img_resize1">
+                                          </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" valign="top" class="mobile" style="display: none;">
+                                          <a href="#">
+                                          <img src="https://wfh1020.upupload.com/70568/u0pno91yzf70568/images/mbl-img.png" width="590" height="430" alt="banner" class="img_resize1">
+                                          </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" valign="top" height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                              </table>
+                            </td>
+                        </tr>
+
+
+                        <!-- Data snapshot block -->
+                        <common-content-data-snapshot-block
+                          date=date
+                          section-name="Data Snapshot"
+                          newsletter=newsletter
+                        />
+
+
+                        <!-- 11th block-->
+                        <tr>
+                          <td align="center" valign="top">
+                            <table width="100%" border="0" align="center"  cellpadding="0" cellspacing="0">
+                                <tbody>
+                                  <tr>
+                                      <td align="center" valign="top" height="29" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:13px;line-height:22px; color:#850000;font-weight:400;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 14px;">SPONSORED CONTENT BY SHELL
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:23px;line-height:25px; color:#131315;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 14px;">
+                                        Saving with Synthetics
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="3" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:17px;line-height:22px; color:#000000;font-weight:400;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 14px;">You may know what a synthetic lubricant is, but do you know how they really protect, perform and last? Synthetic lubricants provide you with many long-lasting benefits because it is their nature to solve problems.
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="32" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:13px;line-height:15px; color:#308185;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.2px;padding: 0 14px;">READER RIGS
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="0" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top">
+                                        <a>
+                                        <img src="https://wfh1020.upupload.com/70568/u0pno91yzf70568/images/bg-img3.png" width="586" height="306" alt="banner" class="img_resize1">
+                                        </a>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:22px;line-height:23px; color:#08080a;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.4px;padding: 0 14px;">Sam Redmon's 2007 Peterbilt 379
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:16px;line-height:21px; color:#08080a;font-weight:400;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.5px;padding: 0 14px;">Sam Redmon owns this 2007 Peterbilt 379 and hauls mostly refrigerated products in his Redmon Transport operation
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" >
+                                        <table width="190" border="0" align="center" cellpadding="0" cellspacing="0" style="background: #eff1f3" >
+                                            <tbody>
+                                              <tr>
+                                                  <td align="center" valign="middle" height="38" style="font-size:12px; color:#000000;font-weight:700;font-family:'Roboto Condensed', sans-serif, Arial,sans-serif;letter-spacing:0.8px; text-transform: uppercase;">
+                                                    <a href="#" target="_blank" style="color: #000000; text-decoration: none;  display: block;" >FEATURED RESOURCES </a>
+                                                  </td>
+                                              </tr>
+                                            </tbody>
+                                        </table>
+                                      </td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                          </td>
+                        </tr>
+
+
+
+
+                        <!-- 12th block-->
+                        <tr>
+                          <td align="center" valign="top">
+                            <table width="580" border="0" align="center"  cellpadding="0" cellspacing="0" class="wrap003">
+                                <tbody>
+                                  <tr>
+                                      <td align="center" valign="top" height="22" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:13px;line-height:15px; color:#a8191f;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.2px;padding: 0 3px;">
+                                        SPONSORED WHITEPAPER
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="4" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="1" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:21px;line-height:26px; color:#212123;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.8px;padding: 0 3px;">How Business Leaders are Moving Freight Logistics to the Digital Landscape
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:17px;line-height:22px; color:#000000;font-weight:400;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 3px;">For effective commercial vehicle asset utilization, collaboration is essential under any circumstances. But only by creating a true community of transportation industry stakeholders...
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:13px;line-height:22px; color:#016569;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 3px;">
+                                        PODCAST
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:21px;line-height:26px; color:#212123;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.8px;padding: 0 3px;">Rumble strips ahead: How to manage for downside risk in turbulent trucking times
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:17px;line-height:22px; color:#000000;font-weight:400;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 3px;">Whatever your own business's individual situation, there's something for you in this talk with Gary Buchs and Kevin Rutherford in large part on best practices in a time like the present.
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:13px;line-height:22px; color:#016569;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 3px;">
+                                        E-BOOK
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:21px;line-height:26px; color:#212123;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.8px;padding: 0 3px;">The Air Brake Book, 10th Edition
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                      <td align="left" valign="top" style="font-size:17px;line-height:22px; color:#000000;font-weight:400;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 3px;">We're proud to bring you the Air Brake Book, 10th Edition. Since we published the last edition, the industry has seen several regulations and safety initiatives that have impacted the stopping requirements...
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td align="center" valign="top" height="38" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                          </td>
+                        </tr>
+
+                        <!-- Footer block -->
+                        <common-footer-block />
+
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </@body>
+</marko-newsletter-root>
