@@ -1,4 +1,7 @@
 {
+  "<common-content-announcement-block>": {
+    "template": "./announcement.marko"
+  },
   "<common-content-data-snapshot-block>": {
     "template": "./data-snapshot.marko"
   },
