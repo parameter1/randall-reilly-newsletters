@@ -1,4 +1,7 @@
 {
+  "<common-table-hr-element>": {
+    "template": "./table-hr.marko"
+  },
   "<common-table-spacer-element>": {
     "template": "./table-spacer.marko"
   }
