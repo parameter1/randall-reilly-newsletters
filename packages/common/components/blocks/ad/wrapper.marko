@@ -1,0 +1,57 @@
+import { get, getAsObject } from "@base-cms/object-path";
+import defaultValue from "@base-cms/marko-core/utils/default-value";
+import queryFragment from "@randall-reilly/package-common/graphql/fragments/content-list";
+import PromotionAdvertisementBlock from "./promotion-advertisement";
+import PromotionSponsoredBlock from "./promotion-sponsored";
+
+$ const adUnit = getAsObject(input, "adUnit");
+$ const newsletter = getAsObject(input, "newsletter");
+$ const { sectionName, date } = input;
+
+$ const promotionComponents = {
+  "advertisement-block": PromotionAdvertisementBlock,
+  "sponsored-block": PromotionSponsoredBlock,
+};
+$ const PromotionComponent = promotionComponents[defaultValue(input.promotionComponent, "advertisement-block")];
+
+<!-- Check for scheduled promotion -->
+<marko-web-query|{ nodes }| name="newsletter-scheduled-content" collapsible=false params={
+  date: date.valueOf(),
+  newsletterId: newsletter.id,
+  sectionName,
+  limit: 1,
+  queryFragment,
+}>
+  <if(nodes.length)>
+    $ const content = nodes.slice(0, 1)[0];
+    <${PromotionComponent}
+      date=date
+      newsletter=newsletter
+      section-name=sectionName
+      content=content
+    />
+  </if>
+  <else-if(adUnit.id)>
+    <common-ad-emailx-block
+      ad-unit=adUnit
+      date=date
+      dpm=input.dpm
+    />
+  </else-if>
+</marko-web-query>
+
+<!-- <marko-core-obj-value|{ value: image }| obj=node field="primaryImage" as="object">
+  <marko-newsletter-imgix
+    src=image.src
+    alt=image.alt
+    options={ w: 115, h: 115 }
+    class="main"
+    attrs={ border: 0, width: 115, h: 115, align: "left", hspace: 10, style: imgStyles }
+  >
+    <@link href=node.siteContext.url target="_blank" attrs={ style: imgLinkStyles }>
+      <@after>
+        <common-dpm-content node=node dpm=input.dpm date=date />
+      </@after>
+    </@link>
+  </marko-newsletter-imgix>
+</marko-core-obj-value> -->

@@ -1,0 +1,54 @@
+import { get, getAsObject } from "@base-cms/object-path";
+
+$ const newsletter = getAsObject(input, "newsletter");
+$ const { sectionName, date, content } = input;
+
+$ const url = get(content, 'siteContext.url');
+$ const company = getAsObject(content, 'company');
+
+<tr>
+  <td align="center" valign="top">
+    <table width="580" border="0" align="center" cellpadding="0" cellspacing="0" class="wrap003">
+        <common-table-spacer-element height="12" />
+        <tr>
+          <td align="left" valign="middle" style="font-size:15px;line-height:20px; color:#666666;font-weight:400;letter-spacing: -0.2px;text-align: center;">Advertisement</td>
+        </tr>
+        <tr>
+          <td align="center" valign="top" dir="rtl">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" valign="top" height="16" style="font-size:1px; line-height:1px;">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="right" valign="top" width="330" class="split_cont1">
+                  <a href=url style="display: block; font-size: 0; line-height: 0;">
+                    <img src="https://wfh1020.upupload.com/70568/u0pno91yzf70568/images/small-img1.png" width="316" height="210" alt="img" style="font-size: 0; line-height: 0; border: 0;" class="img_resize2">
+                  </a>
+                </td>
+                <td align="left" valign="top" class="split_cont1">
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="left" valign="top">
+                        <a href=url style="display: block; font-size: 0; line-height: 0;">
+                          <img src="https://wfh1020.upupload.com/70568/u0pno91yzf70568/images/version2.png" width="89" height="42" alt="img" style="font-size: 0; line-height: 0; border: 0;">
+                        </a>
+                      </td>
+                    </tr>
+                    <common-table-spacer-element height="6" />
+                    <tr>
+                      <td align="left" valign="top" style="font-size:17px;line-height:22px; color:#202022;font-weight:400;letter-spacing: 0.2px;">Our GPS truck tracking helps you manage all the complex requirements of a trucking fleet. </td>
+                    </tr>
+                    <common-table-spacer-element height="9" />
+                    <tr>
+                      <td align="left" valign="top" style="font-size:17px;line-height:23px; color:#3475b6;font-weight:400;letter-spacing: 0.2px;">Learn more at<a href="VerizonConnect.com" target="_blank" style="text-decoration: none;color: #3475b6;"> VerizonConnect.com</a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <common-table-hr-element height="17" />
+    </table>
+  </td>
+</tr>
