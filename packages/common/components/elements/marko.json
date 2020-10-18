@@ -1,0 +1,5 @@
+{
+  "<common-table-spacer-element>": {
+    "template": "./table-spacer.marko"
+  }
+}
