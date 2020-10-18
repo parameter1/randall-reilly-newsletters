@@ -1,0 +1,5 @@
+{
+  "<common-view-online-block>": {
+    "template": "./view-online.marko"
+  }
+}
