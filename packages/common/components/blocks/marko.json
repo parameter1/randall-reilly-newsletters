@@ -1,4 +1,7 @@
 {
+  "<common-head-block>": {
+    "template": "./head.marko"
+  },
   "<common-header-block>": {
     "template": "./header.marko"
   },
