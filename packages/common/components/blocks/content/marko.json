@@ -1,4 +1,7 @@
 {
+  "<common-content-data-snapshot-block>": {
+    "template": "./data-snapshot.marko"
+  },
   "<common-content-list-block>": {
     "template": "./list.marko"
   }
