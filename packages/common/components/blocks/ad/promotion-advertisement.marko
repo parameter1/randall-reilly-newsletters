@@ -37,11 +37,13 @@ $ const company = getAsObject(content, 'company');
                     </tr>
                     <common-table-spacer-element height="6" />
                     <tr>
-                      <td align="left" valign="top" style="font-size:17px;line-height:22px; color:#202022;font-weight:400;letter-spacing: 0.2px;">Our GPS truck tracking helps you manage all the complex requirements of a trucking fleet. </td>
+                      <td align="left" valign="top" style="font-size:17px;line-height:22px; color:#202022;font-weight:400;letter-spacing: 0.2px;">${content.teaser}</td>
                     </tr>
                     <common-table-spacer-element height="9" />
                     <tr>
-                      <td align="left" valign="top" style="font-size:17px;line-height:23px; color:#3475b6;font-weight:400;letter-spacing: 0.2px;">Learn more at<a href="VerizonConnect.com" target="_blank" style="text-decoration: none;color: #3475b6;"> VerizonConnect.com</a></td>
+                      <td align="left" valign="top" style="font-size:17px;line-height:23px; color:#3475b6;font-weight:400;letter-spacing: 0.2px;">
+                        <a href=url target="_blank" style="text-decoration: none;color: #3475b6;">${content.linkText}</a>
+                      </td>
                     </tr>
                   </table>
                 </td>
