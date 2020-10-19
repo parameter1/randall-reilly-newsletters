@@ -5,6 +5,7 @@ import queryFragment from "@randall-reilly/package-common/graphql/fragments/cont
 $ const { sectionName, date, newsletter } = input;
 
 $ const withImage = defaultValue(input.withImage, false);
+$ const withHeader = defaultValue(input.withHeader, false);
 
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" collapsible=false params={
   date: date.valueOf(),
@@ -15,6 +16,9 @@ $ const withImage = defaultValue(input.withImage, false);
   queryFragment,
 }>
   <if(nodes.length)>
+    <if(withHeader)>
+      <common-list-header-element title=sectionName />
+    </if>
     <for|content| of=nodes>
       <tr>
         <td align="center" valign="top">
