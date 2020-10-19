@@ -28,23 +28,18 @@ $ const withHeader = defaultValue(input.withHeader, false);
             </tr>
             <if(withImage)>
           <table width="610" border="0" align="center" cellpadding="0" cellspacing="0" class="wrap003">
+
+            $ const labels = getAsArray(content, 'labels');
+            <if(labels.includes('Sponsored'))>
+              $ const tag = (content.company) ? `Sponsored Content by ${get(content, 'company.name')}` : 'Sponsored Content';
               <tr>
-                <td align="center" valign="top">
-                  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
-                    <tr>
-                      <td align="left" valign="top">
-                        <a href="#">
-                          <img src="https://wfh1020.upupload.com/70568/u0pno91yzf70568/images/banner-img1.png" alt="img" width="573" height="514" border="0" style="padding: 0;margin: 0;display: block;" class="img_resize1">
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
+                <td align="left" valign="top" style=sponsoredTagStyle>${tag}</td>
               </tr>
-              <common-table-spacer-element height="6" />
             </if>
             <else>
-              <common-table-spacer-element height="3" />
+              <tr>
+                <td align="left" valign="top" style=tagStyle>${get(content, 'primarySection.name')}</td>
+              </tr>
             </else>
             <tr>
               <td align="left" valign="top" style="font-size:22px;line-height:28px; color:#202022;font-weight:700;letter-spacing: 0.2px;">${content.name}</td>
