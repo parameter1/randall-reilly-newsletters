@@ -86,6 +86,15 @@ $ const { newsletter, date } = data;
                           ad-unit=emailX.getAdUnit({ name: "ad-slot-3", alias: newsletter.alias })
                         />
 
+                        <!-- Content list block (no image) -->
+                        <common-content-list-block
+                          date=date
+                          section-name="Main"
+                          newsletter=newsletter
+                          with-image=false
+                          limit=4
+                          skip=2
+                        />
 
 
                         <!-- Data snapshot block -->
