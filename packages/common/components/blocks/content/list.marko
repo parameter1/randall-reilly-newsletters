@@ -7,6 +7,35 @@ $ const { sectionName, date, newsletter } = input;
 $ const withImage = defaultValue(input.withImage, false);
 $ const withHeader = defaultValue(input.withHeader, false);
 
+$ const imgStyles = {
+  "border": 0,
+  "outline": "none",
+  "text-decoration": "none",
+  "display": "block",
+  "height": "auto !important",
+  "max-width": "100% !important",
+};
+
+$ const imgLinkStyles = {
+  "border": 0,
+  "outline": "none",
+  "text-decoration": "none",
+};
+
+$ const tagStyle = {
+  "font-size": "14px",
+  "line-height": "19px",
+  "color": "#277c80",
+  "font-weight": 400,
+  "letter-spacing": "0px",
+  "text-transform": "uppercase",
+}
+
+$ const sponsoredTagStyle = {
+  ...tagStyle,
+  "color": "#a91b20",
+}
+
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" collapsible=false params={
   date: date.valueOf(),
   newsletterId: newsletter.id,
