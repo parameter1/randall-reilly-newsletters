@@ -58,11 +58,13 @@ $ const withHeader = defaultValue(input.withHeader, false);
               <common-table-spacer-element height="10" />
             </if>
             <tr>
-              <td align="left" valign="top" style="font-size:22px;line-height:28px; color:#202022;font-weight:700;letter-spacing: 0.2px;">${content.name}</td>
+              <td align="left" valign="top">
+                <a style="font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;" href=content.siteContext.url>${content.name}</a>
+              </td>
             </tr>
             <common-table-spacer-element height="5" />
             <tr>
-              <td align="left" valign="middle" style="font-size:17px;line-height:23px; color:#202022;font-weight:400;letter-spacing: 0.1px;">${content.teaser}</td>
+              <td align="left" valign="middle" style="font-size: 17px;line-height: 23px;color: #202022;font-weight: 400;">${content.teaser}</td>
             </tr>
             <!-- <common-table-hr-element height="31" />
             <common-table-spacer-element /> -->
