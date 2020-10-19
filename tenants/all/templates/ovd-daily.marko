@@ -96,6 +96,14 @@ $ const { newsletter, date } = data;
                           skip=2
                         />
 
+                        <!-- Advertisement / Promotion block -->
+                        <common-ad-wrapper-block
+                          date=date
+                          section-name="Ad Slot 4"
+                          newsletter=newsletter
+                          promotion-component="advertisement-block"
+                          ad-unit=emailX.getAdUnit({ name: "ad-slot-4", alias: newsletter.alias })
+                        />
 
                         <!-- Data snapshot block -->
                         <common-content-background-block
