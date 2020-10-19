@@ -1,9 +1,6 @@
 {
-  "<common-content-announcement-block>": {
-    "template": "./announcement.marko"
-  },
-  "<common-content-data-snapshot-block>": {
-    "template": "./data-snapshot.marko"
+  "<common-content-background-block>": {
+    "template": "./background.marko"
   },
   "<common-content-list-block>": {
     "template": "./list.marko"
