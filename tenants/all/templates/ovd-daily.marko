@@ -227,6 +227,7 @@ $ const { newsletter, date } = data;
                           newsletter=newsletter
                         />
 
+                        <!-- Content list block (no image) -->
 
                         <!-- 11th block-->
                         <tr>
@@ -307,81 +308,15 @@ $ const { newsletter, date } = data;
 
 
 
-                        <!-- 12th block-->
-                        <tr>
-                          <td align="center" valign="top">
-                            <table width="580" border="0" align="center"  cellpadding="0" cellspacing="0" class="wrap003">
-                                <tbody>
-                                  <tr>
-                                      <td align="center" valign="top" height="22" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                      <td align="left" valign="top" style="font-size:13px;line-height:15px; color:#a8191f;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.2px;padding: 0 3px;">
-                                        SPONSORED WHITEPAPER
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td align="center" valign="top" height="4" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                      <td align="center" valign="top" height="1" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                      <td align="left" valign="top" style="font-size:21px;line-height:26px; color:#212123;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.8px;padding: 0 3px;">How Business Leaders are Moving Freight Logistics to the Digital Landscape
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td align="center" valign="top" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                      <td align="left" valign="top" style="font-size:17px;line-height:22px; color:#000000;font-weight:400;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 3px;">For effective commercial vehicle asset utilization, collaboration is essential under any circumstances. But only by creating a true community of transportation industry stakeholders...
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td align="center" valign="top" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                      <td align="left" valign="top" style="font-size:13px;line-height:22px; color:#016569;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 3px;">
-                                        PODCAST
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td align="left" valign="top" style="font-size:21px;line-height:26px; color:#212123;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.8px;padding: 0 3px;">Rumble strips ahead: How to manage for downside risk in turbulent trucking times
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td align="center" valign="top" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                      <td align="left" valign="top" style="font-size:17px;line-height:22px; color:#000000;font-weight:400;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 3px;">Whatever your own business's individual situation, there's something for you in this talk with Gary Buchs and Kevin Rutherford in large part on best practices in a time like the present.
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td align="center" valign="top" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                      <td align="left" valign="top" style="font-size:13px;line-height:22px; color:#016569;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 3px;">
-                                        E-BOOK
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td align="left" valign="top" style="font-size:21px;line-height:26px; color:#212123;font-weight:500;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.8px;padding: 0 3px;">The Air Brake Book, 10th Edition
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td align="center" valign="top" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                  </tr>
-                                  <tr>
-                                      <td align="left" valign="top" style="font-size:17px;line-height:22px; color:#000000;font-weight:400;font-family: 'Roboto', Arial,sans-serif;letter-spacing:0.1px;padding: 0 3px;">We're proud to bring you the Air Brake Book, 10th Edition. Since we published the last edition, the industry has seen several regulations and safety initiatives that have impacted the stopping requirements...
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td align="center" valign="top" height="38" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                  </tr>
-                                </tbody>
-                            </table>
-                          </td>
-                        </tr>
+                        <common-content-list-block
+                          date=date
+                          section-name="Featured Resources"
+                          newsletter=newsletter
+                          with-image=false
+                          with-header=true
+                          limit=3
+                          skip=0
+                        />
 
                         <!-- Footer block -->
                         <common-footer-block />
