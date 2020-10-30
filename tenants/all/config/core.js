@@ -5,6 +5,7 @@ const config = {
     },
   },
   'ovd-daily': {
+    name: 'Daily Report',
     logoSrc: '/files/base/randallreilly/all/image/static/ovd-logo.png',
     subscribeLink: 'https://www.overdrive.com/subscribe',
     contactLinks: [
