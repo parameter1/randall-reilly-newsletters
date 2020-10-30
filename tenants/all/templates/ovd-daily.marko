@@ -43,10 +43,10 @@ $ const { newsletter, date } = data;
                         <!-- Sponsored by block-->
                         <common-ad-wrapper-block
                           date=date
-                          section-name="Ad Slot 1"
+                          section-name="Sponsor"
                           newsletter=newsletter
                           promotion-component="sponsored-block"
-                          ad-unit=emailX.getAdUnit({ name: "ad-slot-1", alias: newsletter.alias })
+                          ad-unit=emailX.getAdUnit({ name: "sponsor", alias: newsletter.alias })
                         />
 
                         <!--Lead story block-->
@@ -61,16 +61,16 @@ $ const { newsletter, date } = data;
                         <!-- Advertisement / Promotion block -->
                         <common-ad-wrapper-block
                           date=date
-                          section-name="Ad Slot 2"
+                          section-name="Rotation A"
                           newsletter=newsletter
                           promotion-component="advertisement-block"
-                          ad-unit=emailX.getAdUnit({ name: "ad-slot-2", alias: newsletter.alias })
+                          ad-unit=emailX.getAdUnit({ name: "rotation-a", alias: newsletter.alias })
                         />
 
                         <!-- Content list block (no image) -->
                         <common-content-list-block
                           date=date
-                          section-name="Main"
+                          section-name="Flow"
                           newsletter=newsletter
                           with-image=false
                           limit=2
@@ -80,29 +80,39 @@ $ const { newsletter, date } = data;
                         <!-- Advertisement / Promotion block -->
                         <common-ad-wrapper-block
                           date=date
-                          section-name="Ad Slot 3"
+                          section-name="Rotation B"
                           newsletter=newsletter
                           promotion-component="advertisement-block"
-                          ad-unit=emailX.getAdUnit({ name: "ad-slot-3", alias: newsletter.alias })
+                          ad-unit=emailX.getAdUnit({ name: "rotation-b", alias: newsletter.alias })
                         />
 
                         <!-- Content list block (no image) -->
                         <common-content-list-block
                           date=date
-                          section-name="Main"
+                          section-name="Flow"
                           newsletter=newsletter
                           with-image=false
-                          limit=4
+                          limit=2
                           skip=2
                         />
 
                         <!-- Advertisement / Promotion block -->
                         <common-ad-wrapper-block
                           date=date
-                          section-name="Ad Slot 4"
+                          section-name="Rotation C"
                           newsletter=newsletter
                           promotion-component="advertisement-block"
-                          ad-unit=emailX.getAdUnit({ name: "ad-slot-4", alias: newsletter.alias })
+                          ad-unit=emailX.getAdUnit({ name: "rotation-c", alias: newsletter.alias })
+                        />
+
+                        <!-- Content list block (no image) -->
+                        <common-content-list-block
+                          date=date
+                          section-name="Flow"
+                          newsletter=newsletter
+                          with-image=false
+                          limit=1
+                          skip=4
                         />
 
                         <!-- Data snapshot block -->
@@ -115,17 +125,26 @@ $ const { newsletter, date } = data;
                         <!-- Content list block (no image) -->
                         <common-content-list-block
                           date=date
-                          section-name="Main"
+                          section-name="Flow"
                           newsletter=newsletter
                           with-image=false
                           limit=1
-                          skip=6
+                          skip=5
+                        />
+
+                        <!-- Advertisement / Promotion block -->
+                        <common-ad-wrapper-block
+                          date=date
+                          section-name="Rotation D"
+                          newsletter=newsletter
+                          promotion-component="advertisement-block"
+                          ad-unit=emailX.getAdUnit({ name: "rotation-d", alias: newsletter.alias })
                         />
 
                         <!-- Content list block (with image) -->
                         <common-content-list-block
                           date=date
-                          section-name="Main"
+                          section-name="Flow"
                           newsletter=newsletter
                           with-image=true
                           limit=1
