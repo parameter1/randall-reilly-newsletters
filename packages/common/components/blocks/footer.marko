@@ -91,23 +91,29 @@ $ const smallerUnderlineStyle = {
                   </td>
                 </tr>
                 <common-table-spacer-element height="21" />
-                <tr>
-                  <td align="left" valign="top" style=standardStyle>
-                    Contact
-                  </td>
-                </tr>
-                <tr>
-                  <td align="left" valign="top" style=standardStyle>
-                    <a href=links.advertising style=standardUnderlineStyle>
-                      Advertising
-                    </a>
-                    <span style="padding: 0 10px;">|</span>
-                    <a href=links.editorial style=standardUnderlineStyle>
-                      Editorial
-                    </a>
-                  </td>
-                </tr>
-                <common-table-spacer-element height="21" />
+
+                $ const contactLinks = getAsArray(newsletterConfig, 'contactLinks');
+                <if(contactLinks.length)>
+                  <tr>
+                    <td align="left" valign="top" style=standardStyle>
+                      Contact
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" valign="top" style=standardStyle>
+                      <for|link, index| of=contactLinks>
+                        <a href=link.href style=standardUnderlineStyle>
+                          ${link.label}
+                        </a>
+                        <if(index < (contactLinks.length - 1))>
+                          <span style="padding: 0 10px;">|</span>
+                        </if>
+                      </for>
+                    </td>
+                  </tr>
+                  <common-table-spacer-element height="21" />
+                </if>
+
                 <tr>
                   <td align="left" valign="top" style=smallerStyle>
                     You are receiving this email because you subscribed to receive relevant news from ${publicationName}.
