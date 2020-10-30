@@ -34,14 +34,16 @@ $ const sponsoredTagStyle = {
   "color": "#a91b20",
 }
 
-<marko-web-query|{ nodes }| name="newsletter-scheduled-content" collapsible=false params={
+$ const queryParams = {
   date: date.valueOf(),
   newsletterId: newsletter.id,
   sectionName,
   limit: input.limit || 3,
   skip: input.skip || 0,
   queryFragment,
-}>
+};
+
+<marko-web-query|{ nodes }| name="newsletter-scheduled-content" collapsible=false params=queryParams>
   <if(nodes.length)>
     <if(withHeader)>
       <common-list-header-element title=sectionName />
