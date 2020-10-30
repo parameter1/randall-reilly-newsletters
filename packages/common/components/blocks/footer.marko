@@ -1,3 +1,4 @@
+import { get, getAsObject, getAsArray } from "@base-cms/object-path";
 $ const { website, config } = out.global;
 $ const { newsletter } = input;
 
@@ -9,6 +10,7 @@ $ const links = {
   unsubscribe: "#",
 };
 $ const newsletterConfig = config.get(newsletter.alias);
+$ const subscribeLink = get(newsletterConfig, "subscribeLink");
 
 $ const standardStyle = {
   "font-size": "17px",
@@ -89,7 +91,7 @@ $ const smallerUnderlineStyle = {
                 <tr>
                   <td align="left" valign="top" style=standardStyle>
                     Did someone forward you this email?
-                    <a href=links.subscribe style=standardUnderlineStyle>
+                    <a href=subscribeLink style=standardUnderlineStyle>
                       Sign up here
                     </a>
                   </td>
@@ -120,7 +122,7 @@ $ const smallerUnderlineStyle = {
                 <common-table-spacer-element height="19" />
                 <tr>
                   <td align="left" valign="top" style=smallerStyle>
-                    <a href=links.unsubscribe style=smallerUnderlineStyle>
+                    <a href="@{confirmunsubscribelink}@" style=smallerUnderlineStyle>
                       Unsubscribe here
                     </a>
                   </td>
