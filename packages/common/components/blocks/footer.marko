@@ -2,9 +2,9 @@ import { get, getAsObject, getAsArray } from "@base-cms/object-path";
 $ const { website, config } = out.global;
 $ const { newsletter } = input;
 
-$ const publicationName = "Overdrive Magazine";
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const subscribeLink = get(newsletterConfig, "subscribeLink");
+$ const publicationName = website.get("name");
 
 $ const standardStyle = {
   "font-size": "17px",
