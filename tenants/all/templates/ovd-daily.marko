@@ -1,8 +1,13 @@
 import queryFragment from "@randall-reilly/package-common/graphql/fragments/content-list";
 import emailX from "../config/email-x";
+import rotateArray from "@randall-reilly/package-common/utils/rotate-array";
 
 $ const { website, config } = out.global;
 $ const { newsletter, date } = data;
+
+$ const dayOfWeek = new Date(date).getDay() || 7;
+$ const adUnits = ['rotation-a', 'rotation-b', 'rotation-c', 'rotation-d', 'rotation-e'];
+$ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
 
 <marko-newsletter-root
   title=newsletter.name
@@ -64,7 +69,7 @@ $ const { newsletter, date } = data;
                           section-name="Rotation A"
                           newsletter=newsletter
                           promotion-component="advertisement-block"
-                          ad-unit=emailX.getAdUnit({ name: "rotation-a", alias: newsletter.alias })
+                          ad-unit=emailX.getAdUnit({ name: adSlots[0], alias: newsletter.alias })
                         />
 
                         <!-- Content list block (no image) -->
@@ -83,7 +88,7 @@ $ const { newsletter, date } = data;
                           section-name="Rotation B"
                           newsletter=newsletter
                           promotion-component="advertisement-block"
-                          ad-unit=emailX.getAdUnit({ name: "rotation-b", alias: newsletter.alias })
+                          ad-unit=emailX.getAdUnit({ name: adSlots[1], alias: newsletter.alias })
                         />
 
                         <!-- Content list block (no image) -->
@@ -102,7 +107,7 @@ $ const { newsletter, date } = data;
                           section-name="Rotation C"
                           newsletter=newsletter
                           promotion-component="advertisement-block"
-                          ad-unit=emailX.getAdUnit({ name: "rotation-c", alias: newsletter.alias })
+                          ad-unit=emailX.getAdUnit({ name: adSlots[2], alias: newsletter.alias })
                         />
 
                         <!-- Content list block (no image) -->
@@ -122,6 +127,15 @@ $ const { newsletter, date } = data;
                           newsletter=newsletter
                         />
 
+                        <!-- Advertisement / Promotion block -->
+                        <common-ad-wrapper-block
+                          date=date
+                          section-name="Rotation D"
+                          newsletter=newsletter
+                          promotion-component="advertisement-block"
+                          ad-unit=emailX.getAdUnit({ name: adSlots[3], alias: newsletter.alias })
+                        />
+
                         <!-- Content list block (no image) -->
                         <common-content-list-block
                           date=date
@@ -135,10 +149,10 @@ $ const { newsletter, date } = data;
                         <!-- Advertisement / Promotion block -->
                         <common-ad-wrapper-block
                           date=date
-                          section-name="Rotation D"
+                          section-name="Rotation E"
                           newsletter=newsletter
                           promotion-component="advertisement-block"
-                          ad-unit=emailX.getAdUnit({ name: "rotation-d", alias: newsletter.alias })
+                          ad-unit=emailX.getAdUnit({ name: adSlots[4], alias: newsletter.alias })
                         />
 
                         <!-- Content list block (with image) -->
