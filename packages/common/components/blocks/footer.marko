@@ -35,15 +35,15 @@ $ const smallerUnderlineStyle = {
 
 <tr>
   <td align="center" valign="top">
-    <table width="100%" border="0" bgcolor="#2f3031" align="center"  cellpadding="0" cellspacing="0">
+    <table role="presentation" width="100%" border="0" bgcolor="#2f3031" align="center"  cellpadding="0" cellspacing="0">
       <tr>
         <td align="center" valign="top">
-          <table width="610" border="0" align="center"  cellpadding="0" cellspacing="0" class="wrap003">
+          <table role="presentation" width="610" border="0" align="center"  cellpadding="0" cellspacing="0" class="wrap003">
             <tbody>
                 <common-table-spacer-element height="18" />
                 <tr>
                   <td align="center" valign="top">
-                    <common-logo-element newsletter=newsletter />
+                    <common-logo-element newsletter=newsletter alt=publicationName />
                   </td>
                 </tr>
                 <common-table-spacer-element height="20" />
@@ -53,7 +53,7 @@ $ const smallerUnderlineStyle = {
                 <if(socialMediaLinks.length)>
                   <tr>
                     <td align="center" valign="top" >
-                      <table width="200" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <table role="presentation" width="200" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tbody>
                           <tr>
                             <for|link| of=socialMediaLinks>
