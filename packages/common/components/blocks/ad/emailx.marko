@@ -1,48 +1,78 @@
+import { getAsObject, get } from "@base-cms/object-path";
 import defaultValue from "@base-cms/marko-core/utils/default-value";
-import { getAsObject } from "@base-cms/object-path";
-
-$ const { config } = out.global;
 
 $ const adUnit = getAsObject(input, "adUnit");
+$ const dpm = getAsObject(input, "dpm");
 
-<!-- merge the dpm input config with the global dpm config -->
-<!-- passing input directly to the component will override the global config values -->
-$ const dpm = {
-  ...config.getAsObject("dpm.emailx"),
-  ...getAsObject(input, "dpm"),
-};
+$ const useEmailxHref = defaultValue(input.useEmailxHref, false);
 
-<if(dpm.enabled)>
+$ const { name, alias } = adUnit;
+$ const classNames = [`email-x-${alias}-${name}`, input.class];
 
-</if>
-<else>
-  <tr>
-    <td align="center" valign="top">
-      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-        <tbody>
-          <common-table-spacer-element height="20" />
-          <tr>
-            <td align="left" valign="middle" style="font-size:15px;line-height:20px; color:#666666;font-weight:400;text-align: center;">Advertisement</td>
-          </tr>
-          <common-table-spacer-element height="2" />
-          <tr>
-            <td align="center" valign="top" class="mobile1">
-              <marko-newsletters-email-x-display class="scaledAd" decoded-params=["email", "send"]>
-                <@ad-unit ...adUnit />
-                <@params date=input.date email="@{email name}@" send="@{track_id}@" />
-              </marko-newsletters-email-x-display>
-            </td>
-          </tr>
-          <!-- <tr>
-            <td align="center" valign="top" class="mobile" style="display: none;">
-              <a href="#">
-                <img src="https://wfh1020.upupload.com/70568/u0pno91yzf70568/images/mbl-img.png" width="590" height="430" alt="banner" class="img_resize1">
-              </a>
-            </td>
-          </tr> -->
-          <common-table-spacer-element height="25" />
-        </tbody>
-      </table>
-    </td>
-  </tr>
-</else>
+<marko-newsletters-email-x-data|{ response }| decoded-params=["email", "send"]>
+  <@ad-unit ...adUnit />
+  <@params date=input.date email="@{email name}@" send="@{track_id}@" include-advertiser=true />
+  <if(response)>
+    $ const { data, clickHref, imageSrc } = response;
+    $ const { ad } = data;
+
+    <!-- determine whether to use emailx click url or the native ad url -->
+    $ const href = useEmailxHref ? clickHref : ad.url;
+    $ const imageAttrs = {
+      ...getAsObject(input.image, "attrs"),
+      width: ad.width,
+      height: ad.height,
+    };
+    <tr>
+      <td align="center" valign="top">
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td align="left" valign="middle" style="font-size:15px;line-height:20px; color:#666666;font-weight:400;text-align: center;">Advertisement</td>
+            </tr>
+            <common-table-spacer-element height="2" />
+            <tr>
+              <td align="center" valign="top" class="mobile1">
+                <marko-core-img ...input.image src=imageSrc attrs=imageAttrs>
+                  <@link target="_blank" ...input.link href=href />
+                </marko-core-img>
+                <if(defaultValue(dpm.enabled, true))>
+                  $ const position = dpm.position || 0;
+                  $ const lcvDefaultValue = position + "|" + get(data, "ad.lineitemName");
+                  $ const dpmArgs = ["ln", "lc", "lcv", "lkw"].reduce((o, key) => {
+                    // allow null to unset the default values.
+                    if (dpm[key] === null) return { ...o, [key]: "" };
+
+                    // otherwise treat all values as strings
+                    const value = `${dpm[key] || ''}`;
+                    if (!value) return o;
+                    // if value is in the form of {some.path} (e.g. {ad.lineItemname})
+                    // get the value off of the emailx response
+                    // otherwise, treat the value as a literal string and use it
+                    const matches = /^\{(.*)\}$/.exec(value);
+                    if (matches && matches[1]) {
+                      const v = get(data, matches[1]);
+                      if (v) return { ...o, [key]: v };
+                      return o;
+                    }
+                    return { ...o, [key]: value };
+                  }, {
+                    lc: "Advertising",
+                    lkw: "bannerad",
+                    ln: get(data, "ad.advertiserName"),
+                    lcv: lcvDefaultValue,
+                  });
+                  <!-- <marko-newsletters-omail-dpm ...dpmArgs /> -->
+                </if>
+              </td>
+            </tr>
+            <common-table-spacer-element height="25" />
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </if>
+  <else>
+    <${input.whenEmpty} />
+  </else>
+</marko-newsletters-email-x-data>
