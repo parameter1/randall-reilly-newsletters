@@ -1,0 +1,20 @@
+$ const { website, config } = out.global;
+$ const { newsletter } = input;
+
+$ const logoSrc = "/files/base/randallreilly/all/image/static/ovd-logo.png";
+
+$ const logoStyles = {
+  "border": "0",
+  "font-size": "0",
+  "line-height": "0",
+}
+
+$ const linkStyles = {
+  "display": "block",
+  "font-size": "0",
+  "line-height": "0",
+}
+
+<marko-newsletter-imgix src=logoSrc options={ w: 130 } alt=newsletter.name attrs={ border: 0, width: 130, style: logoStyles }>
+  <@link href=website.get("origin") title=newsletter.name attrs={ style: linkStyles } target="_blank" />
+</marko-newsletter-imgix>

@@ -2,6 +2,9 @@
   "<common-list-header-element>": {
     "template": "./list-header.marko"
   },
+  "<common-logo-element>": {
+    "template": "./logo.marko"
+  },
   "<common-table-hr-element>": {
     "template": "./table-hr.marko"
   },
