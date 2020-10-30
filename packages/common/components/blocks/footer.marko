@@ -3,12 +3,6 @@ $ const { website, config } = out.global;
 $ const { newsletter } = input;
 
 $ const publicationName = "Overdrive Magazine";
-$ const links = {
-  advertising: "#",
-  editorial: "#",
-  subscribe: "#",
-  unsubscribe: "#",
-};
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const subscribeLink = get(newsletterConfig, "subscribeLink");
 
