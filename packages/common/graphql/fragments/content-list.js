@@ -13,6 +13,12 @@ fragment NewsletterContentListFragment on Content {
     id
     type
     name
+    primaryImage {
+      id
+      src(input: { options: { auto: "format,compress", q: 70 } })
+      alt
+      isLogo
+    }
     siteContext {
       path
     }
