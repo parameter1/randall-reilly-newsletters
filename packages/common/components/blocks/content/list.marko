@@ -53,16 +53,16 @@ $ const queryParams = {
         <td align="center" valign="top">
           <table role="presentation" width="610" border="0" align="center" cellpadding="0" cellspacing="0" class="wrap003">
 
-            $ const labels = getAsArray(content, 'labels');
-            <if(labels.includes('Sponsored'))>
-              $ const tag = (content.company) ? `Sponsored Content by ${get(content, 'company.name')}` : 'Sponsored Content';
+            $ const labels = getAsArray(content, "labels");
+            <if(labels.includes("Sponsored"))>
+              $ const tag = (content.company) ? `Sponsored Content by ${get(content, 'company.name')}` : "Sponsored Content";
               <tr>
                 <td align="left" valign="top" style=sponsoredTagStyle>${tag}</td>
               </tr>
             </if>
             <else>
               <tr>
-                <td align="left" valign="top" style=tagStyle>${get(content, 'primarySection.name')}</td>
+                <td align="left" valign="top" style=tagStyle>${get(content, "primarySection.name")}</td>
               </tr>
             </else>
 
@@ -75,7 +75,7 @@ $ const queryParams = {
                     <marko-newsletter-imgix
                       src=image.src
                       alt=image.alt
-                      options={ w: 610, h: 305, fit: 'crop' }
+                      options={ w: 610, h: 305, fit: "crop" }
                       class="img_resize1"
                       attrs={ border: 0, width: 610, align: "center", vspace: 5, style: imgStyles }
                     >

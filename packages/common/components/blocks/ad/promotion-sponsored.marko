@@ -3,8 +3,8 @@ import { get, getAsObject } from "@base-cms/object-path";
 $ const newsletter = getAsObject(input, "newsletter");
 $ const { sectionName, date, content } = input;
 
-$ const url = get(content, 'siteContext.url');
-$ const company = getAsObject(content, 'company');
+$ const url = get(content, "siteContext.url");
+$ const company = getAsObject(content, "company");
 
 <tr>
   <td align="center" valign="top">

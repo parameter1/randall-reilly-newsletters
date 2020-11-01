@@ -61,7 +61,7 @@ $ const smallerUnderlineStyle = {
                                 <marko-newsletter-imgix
                                   src=`${socialMedia.imagePath}/${link.provider}.png`
                                   alt=link.provider
-                                  options={ w: 32, h: 32, fit: 'crop' }
+                                  options={ w: 32, h: 32, fit: "crop" }
                                   class="img_resize1"
                                   attrs={ border: 0, width: 32, align: "center" }
                                 >
@@ -92,7 +92,7 @@ $ const smallerUnderlineStyle = {
                 </tr>
                 <common-table-spacer-element height="21" />
 
-                $ const contactLinks = getAsArray(newsletterConfig, 'contactLinks');
+                $ const contactLinks = getAsArray(newsletterConfig, "contactLinks");
                 <if(contactLinks.length)>
                   <tr>
                     <td align="left" valign="top" style=standardStyle>
