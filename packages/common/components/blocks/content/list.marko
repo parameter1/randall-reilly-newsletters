@@ -55,7 +55,7 @@ $ const queryParams = {
 
             $ const labels = getAsArray(content, "labels");
             <if(labels.includes("Sponsored"))>
-              $ const tag = (content.company) ? `Sponsored Content by ${get(content, 'company.name')}` : "Sponsored Content";
+              $ const tag = (content.company) ? `Sponsored Content by ${get(content, "company.name")}` : "Sponsored Content";
               <tr>
                 <td align="left" valign="top" style=sponsoredTagStyle>${tag}</td>
               </tr>
