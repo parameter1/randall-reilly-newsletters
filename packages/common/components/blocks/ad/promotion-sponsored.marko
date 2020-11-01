@@ -6,6 +6,18 @@ $ const { sectionName, date, content } = input;
 $ const url = get(content, "siteContext.url");
 $ const company = getAsObject(content, "company");
 
+$ const imgStyles = {
+  "font-size": 0,
+  "line-height": 0,
+  "border": 0,
+};
+
+$ const imgLinkStyles = {
+  "display": "block",
+  "font-size": 0,
+  "line-height": 0,
+}
+
 <tr>
   <td align="center" valign="top">
     <table role="presentation" width="610" border="0" align="center" cellpadding="0" cellspacing="0" class="wrap003">
@@ -29,10 +41,17 @@ $ const company = getAsObject(content, "company");
                               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <common-table-spacer-element height="9" />
                                 <tr>
-                                  <td align="left" valign="top" width="123">
-                                    <a href=url style="display: block; font-size: 0; line-height: 0;">
-                                      <img src="https://wfh1020.upupload.com/70568/u0pno91yzf70568/images/version1.png" width="108" height="81" alt="img" style="font-size: 0;line-height: 0;border: 0;">
-                                    </a>
+                                  <td align="center" valign="center" width="123">
+                                    <marko-core-obj-value|{ value: image }| obj=content.company field="primaryImage" as="object">
+                                      <marko-newsletter-imgix
+                                        src=image.src
+                                        alt=image.alt
+                                        options={ w: 90, h: 40, fit: "fill" }
+                                        attrs={ border: 0, width: 90, style: imgStyles }
+                                      >
+                                        <@link href=content.siteContext.url target="_blank" attrs={ style: imgLinkStyles } />
+                                      </marko-newsletter-imgix>
+                                    </marko-core-obj-value>
                                   </td>
                                   <td align="left" valign="top">
                                     <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
