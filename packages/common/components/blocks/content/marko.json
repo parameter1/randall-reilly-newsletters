@@ -1,0 +1,8 @@
+{
+  "<common-content-background-block>": {
+    "template": "./background.marko"
+  },
+  "<common-content-list-block>": {
+    "template": "./list.marko"
+  }
+}
