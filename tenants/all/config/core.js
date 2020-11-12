@@ -1,4 +1,7 @@
+const emailX = require('./email-x');
+
 const config = {
+  emailX,
   dpm: {
     emailx: {
       enabled: true,
