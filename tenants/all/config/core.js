@@ -6,7 +6,7 @@ const config = {
   },
   'ovd-daily': {
     name: 'Daily Report',
-    logoSrc: '/files/base/randallreilly/all/image/static/ovd-logo.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/ovd-logo-white.png',
     subscribeLink: 'https://www.overdrive.com/subscribe',
     contactLinks: [
       { href: 'https://www.google.com', label: 'Advertising' },
