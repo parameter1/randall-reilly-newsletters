@@ -14,6 +14,7 @@ const config = {
   },
   'ccj-daily': {
     name: 'Daily Report',
+    weekendName: 'Weekend Edition',
     ...brands.ccj,
   },
   'ccj-equipment-weekly': {
@@ -34,6 +35,7 @@ const config = {
   },
   'eqw-daily': {
     name: 'Daily Report',
+    weekendName: 'Weekend Edition',
     ...brands.eqw,
   },
   'ovd-breaking-news': {
@@ -46,6 +48,7 @@ const config = {
   },
   'ovd-daily': {
     name: 'Daily Report',
+    weekendName: 'Weekend Edition',
     ...brands.ovd,
   },
   'tlc-daily': {
