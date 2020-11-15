@@ -19,180 +19,146 @@ $ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
     <common-head-block />
   </@head>
   <@body style="padding:0; margin:0;font-family: 'Roboto', Arial, sans-serif; -webkit-text-size-adjust:100%;">
-    <table role="presentation" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <td align="center" valign="top">
-            <table role="presentation" width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="wrap000">
-              <tbody>
-                <tr>
-                  <td align="center" valign="top">
-                    <table role="presentation" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                      <tbody>
+    <common-body-wrapper-block newsletter=newsletter date=date>
+      <@body>
+        <!-- Announcement block -->
+        <common-content-background-block
+          date=date
+          section-name="Announcement"
+          newsletter=newsletter
+        />
 
-                        <!-- View online block -->
-                        <common-view-online-block />
+        <!-- Sponsored by block-->
+        <common-ad-wrapper-block
+          date=date
+          section-name="Sponsor"
+          newsletter=newsletter
+          promotion-component="sponsored-block"
+          ad-unit=emailX.getAdUnit({ name: "sponsor", alias: newsletter.alias })
+        />
 
-                        <!-- Header block -->
-                        <common-header-block
-                          date=date
-                          newsletter=newsletter
-                        />
+        <!--Lead story block-->
+        <common-content-list-block
+          date=date
+          section-name="Lead"
+          newsletter=newsletter
+          with-image=true
+          limit=1
+        />
 
-                        <!-- Announcement block -->
-                        <common-content-background-block
-                          date=date
-                          section-name="Announcement"
-                          newsletter=newsletter
-                        />
+        <!-- Advertisement / Promotion block -->
+        <common-ad-wrapper-block
+          date=date
+          section-name="Rotation A"
+          newsletter=newsletter
+          promotion-component="advertisement-block"
+          ad-unit=emailX.getAdUnit({ name: adSlots[0], alias: newsletter.alias })
+        />
 
-                        <!-- Sponsored by block-->
-                        <common-ad-wrapper-block
-                          date=date
-                          section-name="Sponsor"
-                          newsletter=newsletter
-                          promotion-component="sponsored-block"
-                          ad-unit=emailX.getAdUnit({ name: "sponsor", alias: newsletter.alias })
-                        />
+        <!-- Content list block (no image) -->
+        <common-content-list-block
+          date=date
+          section-name="Feed"
+          newsletter=newsletter
+          with-image=false
+          limit=2
+          skip=0
+        />
 
-                        <!--Lead story block-->
-                        <common-content-list-block
-                          date=date
-                          section-name="Lead"
-                          newsletter=newsletter
-                          with-image=true
-                          limit=1
-                        />
+        <!-- Advertisement / Promotion block -->
+        <common-ad-wrapper-block
+          date=date
+          section-name="Rotation B"
+          newsletter=newsletter
+          promotion-component="advertisement-block"
+          ad-unit=emailX.getAdUnit({ name: adSlots[1], alias: newsletter.alias })
+        />
 
-                        <!-- Advertisement / Promotion block -->
-                        <common-ad-wrapper-block
-                          date=date
-                          section-name="Rotation A"
-                          newsletter=newsletter
-                          promotion-component="advertisement-block"
-                          ad-unit=emailX.getAdUnit({ name: adSlots[0], alias: newsletter.alias })
-                        />
+        <!-- Content list block (no image) -->
+        <common-content-list-block
+          date=date
+          section-name="Feed"
+          newsletter=newsletter
+          with-image=false
+          limit=2
+          skip=2
+        />
 
-                        <!-- Content list block (no image) -->
-                        <common-content-list-block
-                          date=date
-                          section-name="Feed"
-                          newsletter=newsletter
-                          with-image=false
-                          limit=2
-                          skip=0
-                        />
+        <!-- Advertisement / Promotion block -->
+        <common-ad-wrapper-block
+          date=date
+          section-name="Rotation C"
+          newsletter=newsletter
+          promotion-component="advertisement-block"
+          ad-unit=emailX.getAdUnit({ name: adSlots[2], alias: newsletter.alias })
+        />
 
-                        <!-- Advertisement / Promotion block -->
-                        <common-ad-wrapper-block
-                          date=date
-                          section-name="Rotation B"
-                          newsletter=newsletter
-                          promotion-component="advertisement-block"
-                          ad-unit=emailX.getAdUnit({ name: adSlots[1], alias: newsletter.alias })
-                        />
+        <!-- Content list block (no image) -->
+        <common-content-list-block
+          date=date
+          section-name="Feed"
+          newsletter=newsletter
+          with-image=false
+          limit=1
+          skip=4
+        />
 
-                        <!-- Content list block (no image) -->
-                        <common-content-list-block
-                          date=date
-                          section-name="Feed"
-                          newsletter=newsletter
-                          with-image=false
-                          limit=2
-                          skip=2
-                        />
+        <!-- Data snapshot block -->
+        <common-content-background-block
+          date=date
+          section-name="Data Snapshot"
+          newsletter=newsletter
+        />
 
-                        <!-- Advertisement / Promotion block -->
-                        <common-ad-wrapper-block
-                          date=date
-                          section-name="Rotation C"
-                          newsletter=newsletter
-                          promotion-component="advertisement-block"
-                          ad-unit=emailX.getAdUnit({ name: adSlots[2], alias: newsletter.alias })
-                        />
+        <!-- Advertisement / Promotion block -->
+        <common-ad-wrapper-block
+          date=date
+          section-name="Rotation D"
+          newsletter=newsletter
+          promotion-component="advertisement-block"
+          ad-unit=emailX.getAdUnit({ name: adSlots[3], alias: newsletter.alias })
+        />
 
-                        <!-- Content list block (no image) -->
-                        <common-content-list-block
-                          date=date
-                          section-name="Feed"
-                          newsletter=newsletter
-                          with-image=false
-                          limit=1
-                          skip=4
-                        />
+        <!-- Content list block (no image) -->
+        <common-content-list-block
+          date=date
+          section-name="Feed"
+          newsletter=newsletter
+          with-image=false
+          limit=1
+          skip=5
+        />
 
-                        <!-- Data snapshot block -->
-                        <common-content-background-block
-                          date=date
-                          section-name="Data Snapshot"
-                          newsletter=newsletter
-                        />
+        <!-- Advertisement / Promotion block -->
+        <common-ad-wrapper-block
+          date=date
+          section-name="Rotation E"
+          newsletter=newsletter
+          promotion-component="advertisement-block"
+          ad-unit=emailX.getAdUnit({ name: adSlots[4], alias: newsletter.alias })
+        />
 
-                        <!-- Advertisement / Promotion block -->
-                        <common-ad-wrapper-block
-                          date=date
-                          section-name="Rotation D"
-                          newsletter=newsletter
-                          promotion-component="advertisement-block"
-                          ad-unit=emailX.getAdUnit({ name: adSlots[3], alias: newsletter.alias })
-                        />
+        <!-- Content list block (with image) -->
+        <common-content-list-block
+          date=date
+          section-name="Feed"
+          newsletter=newsletter
+          with-image=true
+          limit=1
+          skip=7
+        />
 
-                        <!-- Content list block (no image) -->
-                        <common-content-list-block
-                          date=date
-                          section-name="Feed"
-                          newsletter=newsletter
-                          with-image=false
-                          limit=1
-                          skip=5
-                        />
-
-                        <!-- Advertisement / Promotion block -->
-                        <common-ad-wrapper-block
-                          date=date
-                          section-name="Rotation E"
-                          newsletter=newsletter
-                          promotion-component="advertisement-block"
-                          ad-unit=emailX.getAdUnit({ name: adSlots[4], alias: newsletter.alias })
-                        />
-
-                        <!-- Content list block (with image) -->
-                        <common-content-list-block
-                          date=date
-                          section-name="Feed"
-                          newsletter=newsletter
-                          with-image=true
-                          limit=1
-                          skip=7
-                        />
-
-                        <!-- Featured Resources block -->
-                        <common-content-list-block
-                          date=date
-                          section-name="Featured Resources"
-                          newsletter=newsletter
-                          with-image=false
-                          with-header=true
-                          limit=3
-                          skip=0
-                        />
-
-                        <!-- Footer block -->
-                        <common-footer-block
-                          date=date
-                          newsletter=newsletter
-                        />
-
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
+        <!-- Featured Resources block -->
+        <common-content-list-block
+          date=date
+          section-name="Featured Resources"
+          newsletter=newsletter
+          with-image=false
+          with-header=true
+          limit=3
+          skip=0
+        />
+      </@body>
+    </common-body-wrapper-block>
   </@body>
 </marko-newsletter-root>
