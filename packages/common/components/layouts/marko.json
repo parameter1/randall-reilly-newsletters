@@ -4,5 +4,8 @@
   },
   "<common-breaking-news-layout>": {
     "template": "./breaking-news.marko"
+  },
+  "<common-weekly-layout>": {
+    "template": "./weekly.marko"
   }
 }
