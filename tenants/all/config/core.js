@@ -8,6 +8,10 @@ const config = {
       enabled: true,
     },
   },
+  'ccj-breaking-news': {
+    name: 'Breaking News Alert',
+    ...brands.ccj,
+  },
   'ccj-daily': {
     name: 'Daily Report',
     ...brands.ccj,
@@ -15,6 +19,10 @@ const config = {
   'eqw-daily': {
     name: 'Daily Report',
     ...brands.eqw,
+  },
+  'ovd-breaking-news': {
+    name: 'Breaking News Alert',
+    ...brands.ovd,
   },
   'ovd-daily': {
     name: 'Daily Report',
