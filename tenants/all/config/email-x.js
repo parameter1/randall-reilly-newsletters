@@ -55,6 +55,60 @@ config
       width: 600,
       height: 100,
     },
+  ])
+
+  .setAdUnits('ccj-daily', [
+    {
+      name: 'sponsor',
+      id: '5fa8132132dc3ed81df3fed7',
+      width: 600,
+      height: 100,
+    },
+  ])
+
+  .setAdUnits('ccj-daily', [
+    {
+      name: 'rotation-a',
+      id: '5fa813341949731cc25f714a',
+      width: 600,
+      height: 100,
+    },
+  ])
+
+  .setAdUnits('ccj-daily', [
+    {
+      name: 'rotation-b',
+      id: '5fa8135119497380e85f715d',
+      width: 600,
+      height: 100,
+    },
+  ])
+
+  .setAdUnits('ccj-daily', [
+    {
+      name: 'rotation-c',
+      id: '5fa8136832dc3ee2fbf3ff05',
+      width: 600,
+      height: 100,
+    },
+  ])
+
+  .setAdUnits('ccj-daily', [
+    {
+      name: 'rotation-d',
+      id: '5fa8137532dc3e2872f3ff18',
+      width: 600,
+      height: 100,
+    },
+  ])
+
+  .setAdUnits('ccj-daily', [
+    {
+      name: 'rotation-e',
+      id: '5fa813811949732de15f718b',
+      width: 600,
+      height: 100,
+    },
   ]);
 
 module.exports = config;
