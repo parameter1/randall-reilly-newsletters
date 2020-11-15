@@ -1,5 +1,8 @@
 {
   "<common-daily-layout>": {
     "template": "./daily.marko"
+  },
+  "<common-breaking-news-layout>": {
+    "template": "./breaking-news.marko"
   }
 }
