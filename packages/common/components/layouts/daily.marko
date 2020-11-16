@@ -5,7 +5,6 @@ $ const { website, config } = out.global;
 $ const { newsletter, date } = input.data;
 
 $ const emailX = config.get('emailX');
-
 $ const dayOfWeek = new Date(date).getDay() || 7;
 $ const adUnits = ['rotation-a', 'rotation-b', 'rotation-c', 'rotation-d', 'rotation-e'];
 $ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
