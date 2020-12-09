@@ -38,6 +38,10 @@ const config = {
     weekendName: 'Weekend Edition',
     ...brands.eqw,
   },
+  'hwt-weekly': {
+    name: 'Weekly Report',
+    ...brands.hwt,
+  },
   'ovd-breaking-news': {
     name: 'Breaking News Alert',
     ...brands.ovd,

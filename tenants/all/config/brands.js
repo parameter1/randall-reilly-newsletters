@@ -107,4 +107,22 @@ module.exports = {
       ],
     },
   },
+  hwt: {
+    brandName: 'Hard Working Trucks',
+    logoSrc: '/files/base/randallreilly/all/image/static/hwt-logo-white.png',
+    subscribeLink: 'https://www.hardworkingtrucks.com/subscribe',
+    contactLinks: [
+      { href: 'https://www.google.com', label: 'Advertising' },
+      { href: 'https://www.google.com', label: 'Editorial' },
+    ],
+    socialMedia: {
+      imagePath: '/files/base/randallreilly/all/image/static/newsletter',
+      links: [
+        { provider: 'facebook', href: 'https://www.facebook.com/hardworkingtrucks/', target: '_blank' },
+        { provider: 'twitter', href: 'https://twitter.com/workingtrucks', target: '_blank' },
+        { provider: 'linkedin', href: 'https://www.linkedin.com/showcase/hard-working-trucks-partner-solutions/', target: '_blank' },
+        { provider: 'youtube', href: 'https://www.youtube.com/user/hardworkingtrucks', target: '_blank' },
+      ],
+    },
+  },
 };
