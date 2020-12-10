@@ -129,6 +129,15 @@
     pretty "^2.0.0"
     recursive-readdir "^2.2.2"
 
+"@base-cms/marko-web-native-x@^1.37.0":
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/@base-cms/marko-web-native-x/-/marko-web-native-x-1.37.0.tgz#16d0a000d98d3dadbd8d09cf7f008037defbe978"
+  integrity sha512-9wdbWQ6m3cFYSX4Q7py/QmhRzyhyYCIsO5Oz6IUj39/mNze4dNqz49VIKuNdQowk25zKYpwj96alHldi/4AyIw==
+  dependencies:
+    "@base-cms/object-path" "^1.37.0"
+    "@base-cms/utils" "^1.37.0"
+    node-fetch "^2.6.1"
+
 "@base-cms/newsletter-cli@^1.37.0":
   version "1.37.0"
   resolved "https://registry.yarnpkg.com/@base-cms/newsletter-cli/-/newsletter-cli-1.37.0.tgz#97c75dcadd1f5423475f9be3230ffb629299fbae"
