@@ -1,13 +1,16 @@
 import queryFragment from "@randall-reilly/package-common/graphql/fragments/content-list";
 import rotateArray from "@randall-reilly/package-common/utils/rotate-array";
+import { get } from "@base-cms/object-path";
 
 $ const { website, config } = out.global;
 $ const { newsletter, date } = input.data;
 
-$ const emailX = config.get('emailX');
+$ const emailX = config.get("emailX");
+$ const nativeX = config.getAsObject("nativeX");
 $ const dayOfWeek = new Date(date).getDay() || 7;
-$ const adUnits = ['rotation-a', 'rotation-b', 'rotation-c', 'rotation-d', 'rotation-e'];
+$ const adUnits = ["rotation-a", "rotation-b", "rotation-c", "rotation-d", "rotation-e"];
 $ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
+$ const placements = ["rotation-a", "rotation-b", "rotation-c", "rotation-d", "rotation-e"];
 
 <marko-newsletter-root
   title=newsletter.name
@@ -34,6 +37,7 @@ $ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
           newsletter=newsletter
           promotion-component="sponsored-block"
           ad-unit=emailX.getAdUnit({ name: "sponsor", alias: newsletter.alias })
+          placement-id=get(nativeX, `placements.${newsletter.alias}.sponsor`)
         />
 
         <!--Lead story block-->
@@ -52,6 +56,7 @@ $ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[0], alias: newsletter.alias })
+          placement-id=get(nativeX, `placements.${newsletter.alias}.${placements[0]}`)
         />
 
         <!-- Content list block (no image) -->
@@ -71,6 +76,7 @@ $ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[1], alias: newsletter.alias })
+          placement-id=get(nativeX, `placements.${newsletter.alias}.${placements[1]}`)
         />
 
         <!-- Content list block (no image) -->
@@ -90,6 +96,7 @@ $ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[2], alias: newsletter.alias })
+          placement-id=get(nativeX, `placements.${newsletter.alias}.${placements[2]}`)
         />
 
         <!-- Content list block (no image) -->
@@ -116,6 +123,7 @@ $ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[3], alias: newsletter.alias })
+          placement-id=get(nativeX, `placements.${newsletter.alias}.${placements[3]}`)
         />
 
         <!-- Content list block (no image) -->
@@ -135,6 +143,7 @@ $ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[4], alias: newsletter.alias })
+          placement-id=get(nativeX, `placements.${newsletter.alias}.${placements[4]}`)
         />
 
         <!-- Content list block (with image) -->

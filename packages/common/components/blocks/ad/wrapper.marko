@@ -1,12 +1,15 @@
-import { get, getAsObject } from "@base-cms/object-path";
+import { getAsObject } from "@base-cms/object-path";
 import defaultValue from "@base-cms/marko-core/utils/default-value";
-import queryFragment from "@randall-reilly/package-common/graphql/fragments/content-list";
+import { convertAdToContent } from "../../../native-x";
 import PromotionAdvertisementBlock from "./promotion-advertisement";
 import PromotionSponsoredBlock from "./promotion-sponsored";
 
+$ const { config } = out.global;
+$ const nativeX = config.getAsObject("nativeX");
+
 $ const adUnit = getAsObject(input, "adUnit");
 $ const newsletter = getAsObject(input, "newsletter");
-$ const { sectionName, date } = input;
+$ const { sectionName, date, placementId } = input;
 
 $ const promotionComponents = {
   "advertisement-block": PromotionAdvertisementBlock,
@@ -14,29 +17,31 @@ $ const promotionComponents = {
 };
 $ const PromotionComponent = promotionComponents[defaultValue(input.promotionComponent, "advertisement-block")];
 
-<!-- Check for scheduled promotion -->
-<marko-web-query|{ nodes }| name="newsletter-scheduled-content" collapsible=false params={
-  date: date.valueOf(),
-  newsletterId: newsletter.id,
-  sectionName,
-  limit: 1,
-  queryFragment,
-}>
-  <if(nodes.length)>
-    $ const content = nodes.slice(0, 1)[0];
-    <${PromotionComponent}
-      date=date
-      newsletter=newsletter
-      section-name=sectionName
-      content=content
-    />
-  </if>
-  <else-if(adUnit.id)>
-    <common-ad-emailx-block
-      newsletter=newsletter
-      ad-unit=adUnit
-      date=date
-      dpm=input.dpm
-    />
-  </else-if>
-</marko-web-query>
+<if(nativeX.uri)>
+  <native-x-fetch|{ data }| uri=nativeX.uri date=date placement-id=placementId>
+    <if(data)>
+      <${PromotionComponent}
+        date=date
+        newsletter=newsletter
+        section-name=sectionName
+        content=convertAdToContent(data, { sectionName })
+      />
+    </if>
+    <else>
+      <common-ad-emailx-block
+        newsletter=newsletter
+        ad-unit=adUnit
+        date=date
+        dpm=input.dpm
+      />
+    </else>
+  </native-x-fetch>
+</if>
+<else>
+  <common-ad-emailx-block
+    newsletter=newsletter
+    ad-unit=adUnit
+    date=date
+    dpm=input.dpm
+  />
+</else>
