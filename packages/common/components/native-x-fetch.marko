@@ -1,18 +1,22 @@
 import { warn } from "@base-cms/utils";
-import { fetchEmailAd } from "../native-x";
+import { dateToTimestamp, fetchEmailAd } from "../native-x";
 
 $ const { req } = out.global;
 $ const {
   uri,
   placementId,
+  date,
   imageOptions,
   logoOptions,
 } = input;
+
+$ const timestamp = date ? dateToTimestamp(date) : undefined;
 
 <if(uri && placementId)>
   <marko-web-resolve|{ resolved }| promise=fetchEmailAd({
     uri,
     placementId,
+    timestamp,
     imageOptions,
     logoOptions,
   })>

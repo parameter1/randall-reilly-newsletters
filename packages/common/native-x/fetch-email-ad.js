@@ -6,11 +6,13 @@ const createHeaders = require('@base-cms/marko-web-native-x/utils/create-headers
 module.exports = async ({
   uri,
   placementId,
+  timestamp,
   imageOptions,
   logoOptions,
   req,
 } = {}) => {
   const params = new URLSearchParams({
+    ...(typeof timestamp === 'number' && { timestamp }),
     ...(isObject(imageOptions) && { imageOptions: JSON.stringify(imageOptions) }),
     ...(isObject(logoOptions) && { advertiserLogoOptions: JSON.stringify(logoOptions) }),
   });
