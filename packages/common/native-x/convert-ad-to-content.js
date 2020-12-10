@@ -5,6 +5,7 @@ module.exports = ({ advertiser, campaign, creative }, { sectionName = 'Sponsored
   return {
     id: campaign.id,
     name: creative.title,
+    linkText: creative.title,
     shortName: creative.title,
     typeTitled: 'Promotion',
     type: 'promotion',
