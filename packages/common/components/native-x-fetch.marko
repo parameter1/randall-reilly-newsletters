@@ -1,0 +1,24 @@
+import { warn } from "@base-cms/utils";
+import { fetchEmailAd } from "../native-x";
+
+$ const { req } = out.global;
+$ const {
+  uri,
+  placementId,
+  imageOptions,
+  logoOptions,
+} = input;
+
+<if(uri && placementId)>
+  <marko-web-resolve|{ resolved }| promise=fetchEmailAd({
+    uri,
+    placementId,
+    imageOptions,
+    logoOptions,
+  })>
+    <${input.renderBody} data=resolved.data />
+  </marko-web-resolve>
+</if>
+<else>
+  $ warn('Unable to fetch campaign from NativeX: a uri and placement ID are required.');
+</else>

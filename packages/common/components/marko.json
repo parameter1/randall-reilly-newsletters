@@ -3,5 +3,11 @@
     "./blocks/marko.json",
     "./elements/marko.json",
     "./layouts/marko.json"
-  ]
+  ],
+  "<native-x-fetch>": {
+    "@uri": "string",
+    "@placement-id": "string",
+    "@image-options": "object",
+    "@logo-options": "object"
+  }
 }
