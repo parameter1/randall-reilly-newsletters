@@ -15,6 +15,7 @@
     "@base-cms/marko-newsletters-email-x": "^1.41.0",
     "@base-cms/marko-web-native-x": "^1.37.0",
     "@base-cms/object-path": "^1.37.0",
+    "@base-cms/utils": "^1.37.0",
     "graphql-tag": "^2.10.1",
     "node-fetch": "^2.6.1"
   }
