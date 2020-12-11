@@ -42,12 +42,12 @@ jobs:
     - <<: *production-job
       stage: production
       name: All/Multi-site
-      script: npx @base-cms/newsletter-deployment-tool deploy all leonis-newsletters
+      script: npx @base-cms/newsletter-deployment-tool deploy all virgon-newsletters
 
     # - <<: *staging-job
     #   stage: staging
     #   name: All/Multi-site
-    #   script: npx @base-cms/newsletter-deployment-tool deploy all leonis-newsletters
+    #   script: npx @base-cms/newsletter-deployment-tool deploy all virgon-newsletters
 
     ############################
     # ^^^ ADD TENANTS HERE ^^^ #
