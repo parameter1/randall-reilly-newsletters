@@ -1,9 +1,11 @@
+import { get } from "@base-cms/object-path";
 import queryFragment from "@randall-reilly/package-common/graphql/fragments/content-list";
 
 $ const { website, config } = out.global;
 $ const { newsletter, date } = input.data;
 
 $ const emailX = config.get('emailX');
+$ const nativeX = config.getAsObject("nativeX");
 
 <marko-newsletter-root
   title=newsletter.name
@@ -23,6 +25,7 @@ $ const emailX = config.get('emailX');
           newsletter=newsletter
           promotion-component="sponsored-block"
           ad-unit=emailX.getAdUnit({ name: "sponsor", alias: newsletter.alias })
+          placement-id=get(nativeX, `placements.${newsletter.alias}.sponsor`)
         />
 
         <!--Lead story block-->
