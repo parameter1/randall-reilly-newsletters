@@ -10,7 +10,6 @@ $ const nativeX = config.getAsObject("nativeX");
 $ const dayOfWeek = new Date(date).getDay() || 7;
 $ const adUnits = ["rotation-a", "rotation-b", "rotation-c", "rotation-d", "rotation-e"];
 $ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
-$ const placements = ["rotation-a", "rotation-b", "rotation-c", "rotation-d", "rotation-e"];
 
 <marko-newsletter-root
   title=newsletter.name
@@ -56,7 +55,7 @@ $ const placements = ["rotation-a", "rotation-b", "rotation-c", "rotation-d", "r
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[0], alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.${placements[0]}`)
+          placement-id=get(nativeX, `placements.${newsletter.alias}.${adSlots[0]}`)
         />
 
         <!-- Content list block (no image) -->
@@ -76,7 +75,7 @@ $ const placements = ["rotation-a", "rotation-b", "rotation-c", "rotation-d", "r
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[1], alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.${placements[1]}`)
+          placement-id=get(nativeX, `placements.${newsletter.alias}.${adSlots[1]}`)
         />
 
         <!-- Content list block (no image) -->
@@ -96,7 +95,7 @@ $ const placements = ["rotation-a", "rotation-b", "rotation-c", "rotation-d", "r
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[2], alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.${placements[2]}`)
+          placement-id=get(nativeX, `placements.${newsletter.alias}.${adSlots[2]}`)
         />
 
         <!-- Content list block (no image) -->
@@ -123,7 +122,7 @@ $ const placements = ["rotation-a", "rotation-b", "rotation-c", "rotation-d", "r
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[3], alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.${placements[3]}`)
+          placement-id=get(nativeX, `placements.${newsletter.alias}.${adSlots[3]}`)
         />
 
         <!-- Content list block (no image) -->
@@ -143,7 +142,7 @@ $ const placements = ["rotation-a", "rotation-b", "rotation-c", "rotation-d", "r
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[4], alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.${placements[4]}`)
+          placement-id=get(nativeX, `placements.${newsletter.alias}.${adSlots[4]}`)
         />
 
         <!-- Content list block (with image) -->
