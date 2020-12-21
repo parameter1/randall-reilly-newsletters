@@ -73,6 +73,12 @@ module.exports = {
       'rotation-d': '5fd192e2b192ef00018433e3',
       'rotation-e': '5fd192e6c19f3b0001d7177a',
     },
+    'ovd-gear': {
+      sponsor: '5fe10be30f96a20001826491',
+      'fixed-a': '5fe10be90f96a2000182649b',
+      'fixed-b': '5fe10bee0f96a200018264ae',
+      'fixed-c': '5fe10bf30f96a200018264b8',
+    },
     'tlc-daily': {
       sponsor: '5fd4fdfc1305250001369d51',
       'rotation-a': '5fd4fe071305250001369d71',
