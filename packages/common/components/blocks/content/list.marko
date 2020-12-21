@@ -6,6 +6,7 @@ $ const { sectionName, date, newsletter } = input;
 
 $ const withImage = defaultValue(input.withImage, false);
 $ const withHeader = defaultValue(input.withHeader, false);
+$ const withSection = defaultValue(input.withSection, true);
 
 $ const imgStyles = {
   "border": 0,
@@ -60,11 +61,11 @@ $ const queryParams = {
                 <td align="left" valign="top" style=sponsoredTagStyle>${tag}</td>
               </tr>
             </if>
-            <else>
+            <else-if(withSection)>
               <tr>
                 <td align="left" valign="top" style=tagStyle>${get(content, "primarySection.name")}</td>
               </tr>
-            </else>
+            </else-if>
 
             <common-table-spacer-element height="6" />
             <if(withImage && content.primaryImage)>
