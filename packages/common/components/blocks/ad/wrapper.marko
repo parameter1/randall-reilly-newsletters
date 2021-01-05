@@ -7,7 +7,7 @@ import PromotionSponsoredBlock from "./promotion-sponsored";
 $ const { config } = out.global;
 $ const nativeX = config.getAsObject("nativeX");
 
-$ const adUnit = getAsObject(input, "adUnit");
+$ const adUnit = (input.adUnit) ? getAsObject(input, "adUnit") : false;
 $ const newsletter = getAsObject(input, "newsletter");
 $ const { sectionName, date, placementId } = input;
 
@@ -27,21 +27,21 @@ $ const PromotionComponent = promotionComponents[defaultValue(input.promotionCom
         content=convertAdToContent(data, { sectionName })
       />
     </if>
-    <else>
+    <else-if(adUnit)>
       <common-ad-emailx-block
         newsletter=newsletter
         ad-unit=adUnit
         date=date
         dpm=input.dpm
       />
-    </else>
+    </else-if>
   </native-x-fetch>
 </if>
-<else>
+<else-if(adUnit)>
   <common-ad-emailx-block
     newsletter=newsletter
     ad-unit=adUnit
     date=date
     dpm=input.dpm
   />
-</else>
+</else-if>

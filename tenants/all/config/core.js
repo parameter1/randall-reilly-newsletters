@@ -57,6 +57,10 @@ const config = {
     weekendName: 'Weekend Edition',
     ...brands.ovd,
   },
+  'ovd-gear': {
+    name: 'Gear',
+    ...brands.ovd,
+  },
   'tlc-daily': {
     name: 'Daily Report',
     ...brands.tlc,
