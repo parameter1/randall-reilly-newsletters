@@ -3,7 +3,7 @@ import { get, getAsObject } from "@base-cms/object-path";
 $ const newsletter = getAsObject(input, "newsletter");
 $ const { sectionName, date, content } = input;
 
-$ const url = get(content, "siteContext.url");
+$ const url = get(content, "siteContext.path");
 $ const company = getAsObject(content, "company");
 
 $ const imgStyles = {
