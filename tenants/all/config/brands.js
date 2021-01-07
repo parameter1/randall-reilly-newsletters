@@ -37,7 +37,7 @@ module.exports = {
   },
   ovd: {
     brandName: 'Overdrive',
-    logoSrc: '/files/base/randallreilly/all/image/static/ovd-logo-white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/ovd_logo_white.png',
     subscribeLink: 'https://www.overdrive.com/subscribe',
     tagline: 'The Voice of the American Trucker',
     contactLinks: [
