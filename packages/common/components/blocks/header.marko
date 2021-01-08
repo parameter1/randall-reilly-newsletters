@@ -1,16 +1,9 @@
-import { get } from "@base-cms/object-path";
-import moment from "moment";
-
 $ const { config } = out.global
 
 $ const { newsletter, date } = input;
 
-$ const dt = moment(date);
-$ const textDayOfWeek = dt.format("dddd");
-$ const isWeekend = (dt.day() === 0 || dt.day() === 6) ? true : false;
-
 $ const newsletterConfig = config.get(newsletter.alias);
-$ const name = (isWeekend && newsletterConfig.weekendName) ? newsletterConfig.weekendName : (newsletterConfig.name || newsletter.name);
+$ const name = (newsletterConfig.name || newsletter.name);
 
 <tr>
   <td align="center" valign="top" bgcolor="#2f3031">

@@ -29,7 +29,6 @@ const config = {
   },
   'ccj-weekend-edition': {
     name: 'Weekend Edition',
-    weekendName: 'Weekend Edition',
     ...brands.ccj,
   },
   'eqw-better-roads': {
@@ -42,12 +41,10 @@ const config = {
   },
   'eqw-daily': {
     name: 'Daily Report',
-    weekendName: 'Weekend Edition',
     ...brands.eqw,
   },
   'eqw-weekend-edition': {
     name: 'Weekend Edition',
-    weekendName: 'Weekend Edition',
     ...brands.eqw,
   },
   'hwt-weekly': {
@@ -64,12 +61,10 @@ const config = {
   },
   'ovd-daily': {
     name: 'Daily Report',
-    weekendName: 'Daily Report',
     ...brands.ovd,
   },
   'ovd-weekend-edition': {
     name: 'Weekend Edition',
-    weekendName: 'Weekend Edition',
     ...brands.ovd,
   },
   'ovd-gear': {
