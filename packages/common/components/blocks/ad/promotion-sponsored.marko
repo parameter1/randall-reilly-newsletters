@@ -46,7 +46,7 @@ $ const imgLinkStyles = {
                                       <marko-newsletter-imgix
                                         src=image.src
                                         alt=image.alt
-                                        options={ w: 90, h: 40, fit: "fill" }
+                                        options={ w: 180, h: 80, fit: "fill", auto: "format,compress" }
                                         attrs={ border: 0, width: 90, style: imgStyles }
                                       >
                                         <@link href=content.siteContext.url target="_blank" attrs={ style: imgLinkStyles } />

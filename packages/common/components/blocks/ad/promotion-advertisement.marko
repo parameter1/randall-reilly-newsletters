@@ -36,7 +36,7 @@ $ const imgLinkStyles = {
                     <marko-newsletter-imgix
                       src=image.src
                       alt=image.alt
-                      options={ w: 330, h: 220, fit: "crop" }
+                      options={ w: 660, h: 440, fit: "crop", auto: "format,compress" }
                       attrs={ border: 0, width: 330, style: imgStyles }
                     >
                       <@link href=url target="_blank" attrs={ style: imgLinkStyles } />
@@ -51,7 +51,7 @@ $ const imgLinkStyles = {
                           <marko-newsletter-imgix
                             src=image.src
                             alt=image.alt
-                            options={ w: 90, h: 40, fit: "fill" }
+                            options={ w: 180, h: 80, fit: "fill", auto: "format,compress" }
                             attrs={ border: 0, width: 90, style: imgStyles }
                           >
                             <@link href=url target="_blank" attrs={ style: imgLinkStyles } />
