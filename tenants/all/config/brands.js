@@ -38,11 +38,11 @@ module.exports = {
   ovd: {
     brandName: 'Overdrive',
     logoSrc: '/files/base/randallreilly/all/image/static/ovd_logo_white.png',
-    subscribeLink: 'https://www.overdrive.com/subscribe',
+    subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=ov_subscriptions',
     tagline: 'The Voice of the American Trucker',
     contactLinks: [
-      { href: 'https://www.google.com', label: 'Advertising' },
-      { href: 'https://www.google.com', label: 'Editorial' },
+      { href: 'https://www.overdriveonline.com/page/advertise', label: 'Advertising' },
+      { href: 'https://www.overdriveonline.com/page/contact-us', label: 'Editorial' },
     ],
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
