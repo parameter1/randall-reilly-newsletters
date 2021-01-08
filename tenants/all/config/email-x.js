@@ -117,6 +117,45 @@ config
     },
   ])
 
+  .setAdUnits('ccj-weekend-edition', [
+    {
+      name: 'sponsor',
+      id: '5fa8132132dc3ed81df3fed7',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '5fa813341949731cc25f714a',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '5fa8135119497380e85f715d',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '5fa8136832dc3ee2fbf3ff05',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '5fa8137532dc3e2872f3ff18',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-e',
+      id: '5fa813811949732de15f718b',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('eqw-better-roads', [
     {
       name: 'sponsor',
@@ -222,6 +261,44 @@ config
     },
   ])
 
+  .setAdUnits('eqw-weekend-edition', [
+    {
+      name: 'sponsor',
+      id: '5fd515a519497300285f7ba2',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '5fd515ba19497360835f7bbe',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '5fd515e532dc3eee8ff408fe',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '5fd5160232dc3eb78ef40911',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '5fd5161a32dc3ee09ef40924',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-e',
+      id: '5fd5163232dc3ef8a3f4092e',
+      width: 300,
+      height: 250,
+    },
+  ])
 
   .setAdUnits('hwt-weekly', [
     {
@@ -299,6 +376,45 @@ config
   ])
 
   .setAdUnits('ovd-daily', [
+    {
+      name: 'sponsor',
+      id: '5f9c04eb32dc3ebbfaf3efc5',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '5f874a0f32dc3e17dff3e9a0',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '5f874a1f32dc3e761af3e9aa',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '5f874b7a32dc3e2b0ef3e9c6',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '5f874baa1949735baf5f5a74',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-e',
+      id: '5f9c04c832dc3ec3e3f3efb2',
+      width: 300,
+      height: 250,
+    },
+  ])
+
+  .setAdUnits('ovd-weekend-edition', [
     {
       name: 'sponsor',
       id: '5f9c04eb32dc3ebbfaf3efc5',

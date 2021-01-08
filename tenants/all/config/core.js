@@ -27,6 +27,11 @@ const config = {
     name: 'Technology Weekly',
     ...brands.ccj,
   },
+  'ccj-weekend-edition': {
+    name: 'Weekend Edition',
+    weekendName: 'Weekend Edition',
+    ...brands.ccj,
+  },
   'eqw-better-roads': {
     name: 'Better Roads',
     ...brands.eqw,
@@ -37,6 +42,11 @@ const config = {
   },
   'eqw-daily': {
     name: 'Daily Report',
+    weekendName: 'Weekend Edition',
+    ...brands.eqw,
+  },
+  'eqw-weekend-edition': {
+    name: 'Weekend Edition',
     weekendName: 'Weekend Edition',
     ...brands.eqw,
   },
@@ -54,6 +64,11 @@ const config = {
   },
   'ovd-daily': {
     name: 'Daily Report',
+    weekendName: 'Daily Report',
+    ...brands.ovd,
+  },
+  'ovd-weekend-edition': {
+    name: 'Weekend Edition',
     weekendName: 'Weekend Edition',
     ...brands.ovd,
   },

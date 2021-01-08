@@ -26,6 +26,14 @@ module.exports = {
       'rotation-c': '5fd3bbf51305250001369143',
       'rotation-d': '5fd3bbf8130525000136914d',
     },
+    'ccj-weekend-edition': {
+      sponsor: '5fd273a413052500013687a7',
+      'rotation-a': '5fd273a9b192ef0001843fe2',
+      'rotation-b': '5fd273ae13052500013687c3',
+      'rotation-c': '5fd273b4b192ef0001843ff5',
+      'rotation-d': '5fd273bab192ef0001843fff',
+      'rotation-e': '5fd273c013052500013687df',
+    },
     'eqw-better-roads': {
       sponsor: '5fd3bce913052500013691f4',
       'rotation-a': '5fd3bcecb192ef0001844988',
@@ -41,6 +49,14 @@ module.exports = {
       'rotation-d': '5fd3bdb2b192ef0001844a04',
     },
     'eqw-daily': {
+      sponsor: '5fd3bde513052500013692b3',
+      'rotation-a': '5fd3bde9b192ef0001844a35',
+      'rotation-b': '5fd3bdecb192ef0001844a3f',
+      'rotation-c': '5fd3bdef13052500013692cf',
+      'rotation-d': '5fd3bdf2b192ef0001844a52',
+      'rotation-e': '5fd3bdf613052500013692e2',
+    },
+    'eqw-weekend-edition': {
       sponsor: '5fd3bde513052500013692b3',
       'rotation-a': '5fd3bde9b192ef0001844a35',
       'rotation-b': '5fd3bdecb192ef0001844a3f',
@@ -78,6 +94,14 @@ module.exports = {
       'fixed-a': '5fe10be90f96a2000182649b',
       'fixed-b': '5fe10bee0f96a200018264ae',
       'fixed-c': '5fe10bf30f96a200018264b8',
+    },
+    'ovd-weekend-edition': {
+      sponsor: '5fd192ccc19f3b0001d71741',
+      'rotation-a': '5fd192d7b192ef00018433d0',
+      'rotation-b': '5fd192dac19f3b0001d7175d',
+      'rotation-c': '5fd192dfc19f3b0001d71767',
+      'rotation-d': '5fd192e2b192ef00018433e3',
+      'rotation-e': '5fd192e6c19f3b0001d7177a',
     },
     'tlc-daily': {
       sponsor: '5fd4fdfc1305250001369d51',
