@@ -1,7 +1,7 @@
-const { isObject } = require('@base-cms/utils');
+const { isObject } = require('@parameter1/base-cms-utils');
 const { URLSearchParams } = require('url');
 const fetch = require('node-fetch');
-const createHeaders = require('@base-cms/marko-web-native-x/utils/create-headers');
+const createHeaders = require('@parameter1/base-cms-marko-web-native-x/utils/create-headers');
 
 module.exports = async ({
   uri,
