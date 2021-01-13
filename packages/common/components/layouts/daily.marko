@@ -8,7 +8,7 @@ $ const { newsletter, date } = input.data;
 $ const emailX = config.get("emailX");
 $ const nativeX = config.getAsObject("nativeX");
 $ const dayOfWeek = new Date(date).getDay() || 7;
-$ const adUnits = ["rotation-a", "rotation-b", "rotation-c", "rotation-d", "rotation-e"];
+$ const adUnits = ["rotation-a", "rotation-e", "rotation-d", "rotation-c", "rotation-b"];
 $ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
 
 <marko-newsletter-root

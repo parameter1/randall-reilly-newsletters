@@ -10,7 +10,7 @@ $ const emailX = config.get('emailX');
 $ const nativeX = config.getAsObject("nativeX");
 
 $ const weekOfYear = moment(new Date(date)).week();
-$ const adUnits = ['rotation-a', 'rotation-b', 'rotation-c', 'rotation-d'];
+$ const adUnits = ['rotation-a', 'rotation-d', 'rotation-c', 'rotation-b'];
 $ const adSlots = rotateArray(adUnits, weekOfYear - 1);
 
 <marko-newsletter-root
