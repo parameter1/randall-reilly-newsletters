@@ -1,7 +1,7 @@
 module.exports = {
   ccj: {
     brandName: 'Commercial Carrier Journal',
-    logoSrc: '/files/base/randallreilly/all/image/static/ccj-logo-white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/ccj/ccj-logo-white.png',
     subscribeLink: 'https://www.ccjdigital.com/subscribe',
     contactLinks: [
       { href: 'https://www.google.com', label: 'Advertising' },
@@ -19,7 +19,7 @@ module.exports = {
   },
   eqw: {
     brandName: 'Equipment World',
-    logoSrc: '/files/base/randallreilly/all/image/static/eqw-logo-white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/eqw/eqw-logo-white.png',
     subscribeLink: 'https://www.equipmentworld.com/subscribe',
     contactLinks: [
       { href: 'https://www.google.com', label: 'Advertising' },
