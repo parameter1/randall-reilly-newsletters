@@ -183,7 +183,7 @@ config
     },
     {
       name: 'rotation-d',
-      id: 'TBD',
+      id: '5fd50dd032dc3e0f31f40845',
       width: 300,
       height: 250,
     },
