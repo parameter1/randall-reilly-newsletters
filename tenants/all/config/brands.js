@@ -2,10 +2,10 @@ module.exports = {
   ccj: {
     brandName: 'Commercial Carrier Journal',
     logoSrc: '/files/base/randallreilly/all/image/static/ccj/ccj-logo-white.png',
-    subscribeLink: 'https://www.ccjdigital.com/subscribe',
+    subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=ccj_subscriptions',
     contactLinks: [
-      { href: 'https://www.google.com', label: 'Advertising' },
-      { href: 'https://www.google.com', label: 'Editorial' },
+      { href: 'https://www.ccjdigital.com/page/advertise', label: 'Advertising' },
+      { href: 'https://www.ccjdigital.com/page/contact-us', label: 'Editorial' },
     ],
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
@@ -20,10 +20,10 @@ module.exports = {
   eqw: {
     brandName: 'Equipment World',
     logoSrc: '/files/base/randallreilly/all/image/static/eqw/eqw-logo-white.png',
-    subscribeLink: 'https://www.equipmentworld.com/subscribe',
+    subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=eqw_subscriptions',
     contactLinks: [
-      { href: 'https://www.google.com', label: 'Advertising' },
-      { href: 'https://www.google.com', label: 'Editorial' },
+      { href: 'https://www.equipmentworld.com/page/advertise', label: 'Advertising' },
+      { href: 'https://www.equipmentworld.com/page/contact-us', label: 'Editorial' },
     ],
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
@@ -58,10 +58,10 @@ module.exports = {
   tlc: {
     brandName: 'Total Landscape Care',
     logoSrc: '/files/base/randallreilly/all/image/static/tlc-logo-white.png',
-    subscribeLink: 'https://www.totallandscapecare.com/subscribe',
+    subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=tlc_subscriptions',
     contactLinks: [
-      { href: 'https://www.google.com', label: 'Advertising' },
-      { href: 'https://www.google.com', label: 'Editorial' },
+      { href: 'https://www.totallandscapecare.com/page/advertise', label: 'Advertising' },
+      { href: 'https://www.totallandscapecare.com/page/contact-us', label: 'Editorial' },
     ],
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
@@ -76,10 +76,10 @@ module.exports = {
   tn: {
     brandName: 'Truckers News',
     logoSrc: '/files/base/randallreilly/all/image/static/tn-logo-white.png',
-    subscribeLink: 'https://www.truckersnews.com/subscribe',
+    subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=tn_subscriptions',
     contactLinks: [
-      { href: 'https://www.google.com', label: 'Advertising' },
-      { href: 'https://www.google.com', label: 'Editorial' },
+      { href: 'https://www.truckersnews.com/page/advertise', label: 'Advertising' },
+      { href: 'https://www.truckersnews.com/page/contact-us', label: 'Editorial' },
     ],
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
@@ -93,10 +93,10 @@ module.exports = {
   tps: {
     brandName: 'Truck Parts and Service',
     logoSrc: '/files/base/randallreilly/all/image/static/tps-logo-white.png',
-    subscribeLink: 'https://www.truckpartsandservice.com/subscribe',
+    subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=tps_subscriptions',
     contactLinks: [
-      { href: 'https://www.google.com', label: 'Advertising' },
-      { href: 'https://www.google.com', label: 'Editorial' },
+      { href: 'https://www.truckpartsandservice.com/page/advertise', label: 'Advertising' },
+      { href: 'https://www.truckpartsandservice.com/page/contact-us', label: 'Editorial' },
     ],
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
@@ -111,10 +111,10 @@ module.exports = {
   hwt: {
     brandName: 'Hard Working Trucks',
     logoSrc: '/files/base/randallreilly/all/image/static/hwt-logo-white.png',
-    subscribeLink: 'https://www.hardworkingtrucks.com/subscribe',
+    subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=hwt_subscriptions',
     contactLinks: [
-      { href: 'https://www.google.com', label: 'Advertising' },
-      { href: 'https://www.google.com', label: 'Editorial' },
+      { href: 'https://www.hardworkingtrucks.com/page/advertise', label: 'Advertising' },
+      { href: 'https://www.hardworkingtrucks.com/page/contact-us', label: 'Editorial' },
     ],
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
