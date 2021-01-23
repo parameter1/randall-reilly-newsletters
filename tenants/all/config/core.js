@@ -79,6 +79,10 @@ const config = {
     name: 'Daily Report',
     ...brands.tn,
   },
+  'tn-gear': {
+    name: 'Gear',
+    ...brands.tn,
+  },
   'tn-she-drives': {
     name: 'She Drives',
     ...brands.tn,
