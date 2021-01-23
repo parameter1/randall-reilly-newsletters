@@ -4,5 +4,8 @@
   },
   "<common-content-list-block>": {
     "template": "./list.marko"
+  },
+  "<common-content-list-item-block>": {
+    "template": "./list-item.marko"
   }
 }
