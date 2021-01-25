@@ -57,7 +57,7 @@ module.exports = {
   },
   tlc: {
     brandName: 'Total Landscape Care',
-    logoSrc: '/files/base/randallreilly/all/image/static/tlc-logo-white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/tlc/tlc-logo-white.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=tlc_subscriptions',
     contactLinks: [
       { href: 'https://www.totallandscapecare.com/page/advertise', label: 'Advertising' },
