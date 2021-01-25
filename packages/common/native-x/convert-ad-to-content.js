@@ -14,6 +14,7 @@ module.exports = ({ advertiser, campaign, creative }, { sectionName = 'Sponsored
     siteContext: {
       path: creative.href,
       canonicalUrl: creative.href,
+      url: creative.href,
     },
     primaryImage: getAsObject(creative, 'image'),
     primarySection: {
