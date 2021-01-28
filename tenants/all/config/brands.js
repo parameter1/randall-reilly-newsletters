@@ -92,7 +92,7 @@ module.exports = {
   },
   tps: {
     brandName: 'Truck Parts and Service',
-    logoSrc: '/files/base/randallreilly/all/image/static/tps-logo-white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/tps/tps-logo-white.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=tps_subscriptions',
     contactLinks: [
       { href: 'https://www.truckpartsandservice.com/page/advertise', label: 'Advertising' },
