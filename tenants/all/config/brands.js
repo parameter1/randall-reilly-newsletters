@@ -91,7 +91,7 @@ module.exports = {
     },
   },
   tps: {
-    brandName: 'Truck Parts and Service',
+    brandName: 'Trucks, Parts, Service',
     logoSrc: '/files/base/randallreilly/all/image/static/tps/tps-logo-white.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=tps_subscriptions',
     contactLinks: [
