@@ -415,30 +415,30 @@ config
   ])
 
   .setAdUnits('ovd-gear', [
-  {
-    name: 'sponsor',
-    id: '60137f3632dc3e5817f52979',
-    width: 300,
-    height: 250,
-  },
-  {
-    name: 'fixed-a',
-    id: '60137f4f32dc3e54ccf52983',
-    width: 300,
-    height: 250,
-  },
-  {
-    name: 'fixed-b',
-    id: '60137f8a19497372a66097f9',
-    width: 300,
-    height: 250,
-  },
-  {
-    name: 'fixed-c',
-    id: '60137f9d32dc3e67cef5299f',
-    width: 300,
-    height: 250,
-  },
+    {
+      name: 'sponsor',
+      id: '60137f3632dc3e5817f52979',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'fixed-a',
+      id: '60137f4f32dc3e54ccf52983',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'fixed-b',
+      id: '60137f8a19497372a66097f9',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'fixed-c',
+      id: '60137f9d32dc3e67cef5299f',
+      width: 300,
+      height: 250,
+    },
   ])
 
   .setAdUnits('ovd-weekend-edition', [
