@@ -414,6 +414,33 @@ config
     },
   ])
 
+  .setAdUnits('ovd-gear', [
+    {
+      name: 'sponsor',
+      id: '60137f3632dc3e5817f52979',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'fixed-a',
+      id: '60137f4f32dc3e54ccf52983',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'fixed-b',
+      id: '60137f8a19497372a66097f9',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'fixed-c',
+      id: '60137f9d32dc3e67cef5299f',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('ovd-weekend-edition', [
     {
       name: 'sponsor',
@@ -526,6 +553,33 @@ config
     {
       name: 'rotation-e',
       id: '5fd522e319497303c85f7e82',
+      width: 300,
+      height: 250,
+    },
+  ])
+
+  .setAdUnits('tn-gear', [
+    {
+      name: 'sponsor',
+      id: '60137e5432dc3e16d6f52900',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'fixed-a',
+      id: '60137e7f32dc3e2406f52913',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'fixed-b',
+      id: '60137e9132dc3e1c01f52926',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'fixed-c',
+      id: '60137e9d32dc3ec262f52942',
       width: 300,
       height: 250,
     },
