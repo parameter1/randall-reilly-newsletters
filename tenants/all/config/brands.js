@@ -75,7 +75,7 @@ module.exports = {
   },
   tn: {
     brandName: 'Truckers News',
-    logoSrc: '/files/base/randallreilly/all/image/static/tn-logo-white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/tn/tn-logo-white.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=tn_subscriptions',
     contactLinks: [
       { href: 'https://www.truckersnews.com/page/advertise', label: 'Advertising' },
@@ -110,7 +110,7 @@ module.exports = {
   },
   hwt: {
     brandName: 'Hard Working Trucks',
-    logoSrc: '/files/base/randallreilly/all/image/static/hwt-logo-white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/hwt/hwt-logo-white.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=hwt_subscriptions',
     contactLinks: [
       { href: 'https://www.hardworkingtrucks.com/page/advertise', label: 'Advertising' },
