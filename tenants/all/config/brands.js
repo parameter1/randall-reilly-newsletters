@@ -10,8 +10,8 @@ module.exports = {
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
       links: [
-        { provider: 'facebook', href: 'https://www.facebook.com/CCJMagazine/', target: '_blank' },
-        { provider: 'twitter', href: 'https://twitter.com/ccjdigital', target: '_blank' },
+        { provider: 'facebook', href: 'https://www.facebook.com/CommercialCarrierJournal', target: '_blank' },
+        { provider: 'twitter', href: 'https://twitter.com/CCJnow', target: '_blank' },
         { provider: 'linkedin', href: 'https://www.linkedin.com/company/commercial-carrier-journal/', target: '_blank' },
         { provider: 'youtube', href: 'https://www.youtube.com/user/CCJDigital', target: '_blank' },
       ],
@@ -51,7 +51,7 @@ module.exports = {
         { provider: 'twitter', href: 'https://twitter.com/overdriveupdate', target: '_blank' },
         { provider: 'linkedin', href: 'https://www.linkedin.com/groups/6650305/', target: '_blank' },
         { provider: 'youtube', href: 'https://www.youtube.com/channel/UCVb9_pwbvG99tK1apahFyIg?view_as=subscriber', target: '_blank' },
-        { provider: 'instagram', href: 'https://www.instagram.com/overdrivetrucking/', target: '_blank' },
+        { provider: 'instagram', href: 'https://www.instagram.com/overdriveonline/', target: '_blank' },
       ],
     },
   },
@@ -67,9 +67,10 @@ module.exports = {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
       links: [
         { provider: 'facebook', href: 'https://www.facebook.com/totallandscapecare/', target: '_blank' },
-        { provider: 'twitter', href: 'https://twitter.com/TLCmagazine', target: '_blank' },
+        { provider: 'twitter', href: 'https://twitter.com/TLConline', target: '_blank' },
         { provider: 'linkedin', href: 'https://www.linkedin.com/showcase/total-landscape-care-partner-solutions/', target: '_blank' },
         { provider: 'youtube', href: 'https://www.youtube.com/channel/UC2oQucc3ULCnu09wude37-Q', target: '_blank' },
+        { provider: 'instagram', href: 'https://www.instagram.com/TotalLandscapeCareOnline', target: '_blank' },
       ],
     },
   },
@@ -84,7 +85,7 @@ module.exports = {
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
       links: [
-        { provider: 'facebook', href: 'https://www.facebook.com/truckersnewsmag/', target: '_blank' },
+        { provider: 'facebook', href: 'https://www.facebook.com/TruckersNews/', target: '_blank' },
         { provider: 'twitter', href: 'https://twitter.com/truckersnews', target: '_blank' },
         { provider: 'youtube', href: 'https://www.youtube.com/channel/UC55CJCUhEdHwOcQ_A4c9U9g', target: '_blank' },
       ],
@@ -101,9 +102,9 @@ module.exports = {
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
       links: [
-        { provider: 'facebook', href: 'https://www.facebook.com/truckpartsandservice/', target: '_blank' },
-        { provider: 'twitter', href: 'https://twitter.com/tpsmagazine', target: '_blank' },
-        { provider: 'linkedin', href: 'https://www.linkedin.com/showcase/truck-parts-and-service-partner-solutions/', target: '_blank' },
+        { provider: 'facebook', href: 'https://www.facebook.com/TrucksPartsService', target: '_blank' },
+        { provider: 'twitter', href: 'https://twitter.com/TPSdaily', target: '_blank' },
+        { provider: 'linkedin', href: 'https://www.linkedin.com/groups/6559995/', target: '_blank' },
         { provider: 'youtube', href: 'https://www.youtube.com/channel/UCcBeotmXyiX_LLp7CYcjY_Q', target: '_blank' },
       ],
     },
