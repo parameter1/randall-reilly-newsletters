@@ -157,6 +157,15 @@ $ const adSlots = rotateArray(adUnits, weekOfYear - 1);
           limit=3
           skip=0
         />
+
+        <!-- Advertisement / Promotion block -->
+        <common-ad-wrapper-block
+          date=date
+          section-name="Featured Resources"
+          newsletter=newsletter
+          promotion-component="native-block"
+          placement-id=get(nativeX, `placements.${newsletter.alias}.featured-resources`)
+        />
       </@body>
     </common-body-wrapper-block>
   </@body>
