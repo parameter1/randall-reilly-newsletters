@@ -147,6 +147,14 @@ module.exports = {
       'rotation-d': '5fd501a8b192ef0001845644',
       'featured-resources': '6036cebdb6775100015e0123',
     },
+    'tn-weekly': {
+      sponsor: '603bbbd70543bd0001cf2a56',
+      'rotation-a': '603bbbeafa53c1000120d2f7',
+      'rotation-b': '603bbbf936fc8700017ceb1e',
+      'rotation-c': '603bbc0a0543bd0001cf2b78',
+      'rotation-d': '603bbc1936fc8700017cebeb',
+      'featured-resources': '603bbc270543bd0001cf2c17',
+    },
     'tps-daily': {
       sponsor: '5fd502491305250001369eb8',
       'rotation-a': '5fd502551305250001369ee8',

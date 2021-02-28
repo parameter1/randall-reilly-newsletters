@@ -618,6 +618,39 @@ config
     },
   ])
 
+  .setAdUnits('tn-weekly', [
+    {
+      name: 'sponsor',
+      id: '603bbca132dc3e1761f57a72',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '603bbcb919497341ee60e481',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '603bbcd3194973e0f960e494',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '603bbce4194973a9dd60e4a7',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '603bbcfa32dc3e5639f57aa9',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('tps-daily', [
     {
       name: 'sponsor',
