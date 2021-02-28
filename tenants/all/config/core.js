@@ -87,7 +87,7 @@ const config = {
     name: 'She Drives',
     ...brands.tn,
   },
-  'tn-weekly': {
+  'tn-weekend-edition': {
     name: 'Weekender',
     ...brands.tn,
   },
