@@ -87,6 +87,10 @@ const config = {
     name: 'She Drives',
     ...brands.tn,
   },
+  'tn-weekly': {
+    name: 'Weekender',
+    ...brands.tn,
+  },
   'tps-daily': {
     name: 'Daily Report',
     ...brands.tps,
