@@ -147,13 +147,14 @@ module.exports = {
       'rotation-d': '5fd501a8b192ef0001845644',
       'featured-resources': '6036cebdb6775100015e0123',
     },
-    'tn-weekly': {
-      sponsor: '603bbbd70543bd0001cf2a56',
-      'rotation-a': '603bbbeafa53c1000120d2f7',
-      'rotation-b': '603bbbf936fc8700017ceb1e',
-      'rotation-c': '603bbc0a0543bd0001cf2b78',
-      'rotation-d': '603bbc1936fc8700017cebeb',
-      'featured-resources': '603bbc270543bd0001cf2c17',
+    'tn-weekend-edition': {
+      sponsor: '5fd50145b192ef00018455b8',
+      'rotation-a': '5fd501571305250001369df3',
+      'rotation-b': '5fd5014a1305250001369dd5',
+      'rotation-c': '5fd5014d1305250001369ddf',
+      'rotation-d': '5fd501531305250001369de9',
+      'rotation-e': '5fd5015bb192ef00018455e6',
+      'featured-resources': '6036ceabb6775100015e001f',
     },
     'tps-daily': {
       sponsor: '5fd502491305250001369eb8',

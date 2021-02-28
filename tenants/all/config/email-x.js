@@ -618,34 +618,40 @@ config
     },
   ])
 
-  .setAdUnits('tn-weekly', [
+  .setAdUnits('tn-weekend-edition', [
     {
       name: 'sponsor',
-      id: '603bbca132dc3e1761f57a72',
+      id: '5fd5227832dc3e465df40b51',
       width: 300,
       height: 250,
     },
     {
       name: 'rotation-a',
-      id: '603bbcb919497341ee60e481',
+      id: '5fd5228f194973e2885f7e36',
       width: 300,
       height: 250,
     },
     {
       name: 'rotation-b',
-      id: '603bbcd3194973e0f960e494',
+      id: '5fd5229e19497383ac5f7e49',
       width: 300,
       height: 250,
     },
     {
       name: 'rotation-c',
-      id: '603bbce4194973a9dd60e4a7',
+      id: '5fd522b71949738b4c5f7e5c',
       width: 300,
       height: 250,
     },
     {
       name: 'rotation-d',
-      id: '603bbcfa32dc3e5639f57aa9',
+      id: '5fd522d21949736f1b5f7e6f',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-e',
+      id: '5fd522e319497303c85f7e82',
       width: 300,
       height: 250,
     },
