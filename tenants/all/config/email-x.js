@@ -183,6 +183,39 @@ config
     },
   ])
 
+  .setAdUnits('ccj-regulatory-rundown', [
+    {
+      name: 'sponsor',
+      id: '606b72b832dc3e6bd5f5c089',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b72ca32dc3eae8cf5c09c',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b72d5194973cff9612c15',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b72f432dc3e4557f5c0b8',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b731932dc3eb570f5c0cb',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('ccj-weekend-edition', [
     {
       name: 'sponsor',

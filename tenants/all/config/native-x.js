@@ -37,6 +37,14 @@ module.exports = {
       'rotation-d': '606b6c640fcde20001fbb3f7',
       'featured-resources': '606b6c6723da7200014b6e0c',
     },
+    'ccj-regulatory-rundown': {
+      sponsor: '606b6d1a0fcde20001fbb88d',
+      'rotation-a': '606b6d1e87b65100012bb5c6',
+      'rotation-b': '606b6d220fcde20001fbb8e4',
+      'rotation-c': '606b6d2887b65100012bb620',
+      'rotation-d': '606b6d2b0fcde20001fbb924',
+      'featured-resources': '606b6d2f26c41a00014c514c',
+    },
     'ccj-technology-weekly': {
       sponsor: '5fd3bbebb192ef00018448bd',
       'rotation-a': '5fd3bbee1305250001369130',

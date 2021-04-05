@@ -31,6 +31,10 @@ const config = {
     name: 'Maintenance Matters',
     ...brands.ccj,
   },
+  'ccj-regulatory-rundown': {
+    name: 'Regulatory Rundown',
+    ...brands.ccj,
+  },
   'ccj-technology-weekly': {
     name: 'Technology Weekly',
     ...brands.ccj,
