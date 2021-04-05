@@ -216,6 +216,39 @@ config
     },
   ])
 
+  .setAdUnits('ccj-safety-tech', [
+    {
+      name: 'sponsor',
+      id: '606b737032dc3eefd3f5c0d5',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b74761949735714612c55',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b74a7194973f1ee612c68',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b74bb32dc3e247ff5c0f1',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b74ce194973af5d612c8d',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('ccj-weekend-edition', [
     {
       name: 'sponsor',

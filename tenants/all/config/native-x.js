@@ -45,6 +45,14 @@ module.exports = {
       'rotation-d': '606b6d2b0fcde20001fbb924',
       'featured-resources': '606b6d2f26c41a00014c514c',
     },
+    'ccj-safety-tech': {
+      sponsor: '606b6d6487b65100012bb7bc',
+      'rotation-a': '606b6d6726c41a00014c5306',
+      'rotation-b': '606b6d6c26c41a00014c5345',
+      'rotation-c': '606b6d7226c41a00014c537c',
+      'rotation-d': '606b6d7523da7200014b7498',
+      'featured-resources': '606b6d7887b65100012bb883',
+    },
     'ccj-technology-weekly': {
       sponsor: '5fd3bbebb192ef00018448bd',
       'rotation-a': '5fd3bbee1305250001369130',

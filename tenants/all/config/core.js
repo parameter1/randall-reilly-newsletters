@@ -35,6 +35,10 @@ const config = {
     name: 'Regulatory Rundown',
     ...brands.ccj,
   },
+  'ccj-safety-tech': {
+    name: 'Safety Tech',
+    ...brands.ccj,
+  },
   'ccj-technology-weekly': {
     name: 'Technology Weekly',
     ...brands.ccj,
