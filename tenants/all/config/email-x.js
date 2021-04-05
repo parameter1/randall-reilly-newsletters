@@ -639,6 +639,39 @@ config
     },
   ])
 
+  .setAdUnits('ovd-new-entrant', [
+    {
+      name: 'sponsor',
+      id: '606b758d1949735859612cec',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b75a01949738c3a612d08',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b75af32dc3e5df9f5c183',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b75c51949734b6c612d1b',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b75d632dc3ec9ebf5c1a8',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('ovd-weekend-edition', [
     {
       name: 'sponsor',

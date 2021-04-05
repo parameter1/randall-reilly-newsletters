@@ -87,6 +87,10 @@ const config = {
     name: 'Maintenance Matters',
     ...brands.ovd,
   },
+  'ovd-new-entrant': {
+    name: 'New Entrant',
+    ...brands.ovd,
+  },
   'ovd-weekend-edition': {
     name: 'Weekend Edition',
     ...brands.ovd,
