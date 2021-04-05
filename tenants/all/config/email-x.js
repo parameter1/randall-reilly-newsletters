@@ -117,6 +117,138 @@ config
     },
   ])
 
+  .setAdUnits('ccj-final-mile', [
+    {
+      name: 'sponsor',
+      id: '606b71e332dc3e8fe3f5bfe8',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b71f732dc3e6c48f5bff2',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b720b32dc3e8109f5c00e',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b722232dc3e157ff5c018',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b723632dc3eb5a3f5c034',
+      width: 300,
+      height: 250,
+    },
+  ])
+
+  .setAdUnits('ccj-maintenance-matters', [
+    {
+      name: 'sponsor',
+      id: '606b725632dc3e945ef5c047',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b7269194973173a612bc2',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b72791949735cb2612bcc',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b728a32dc3efd90f5c06c',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b729d32dc3e5620f5c076',
+      width: 300,
+      height: 250,
+    },
+  ])
+
+  .setAdUnits('ccj-regulatory-rundown', [
+    {
+      name: 'sponsor',
+      id: '606b72b832dc3e6bd5f5c089',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b72ca32dc3eae8cf5c09c',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b72d5194973cff9612c15',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b72f432dc3e4557f5c0b8',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b731932dc3eb570f5c0cb',
+      width: 300,
+      height: 250,
+    },
+  ])
+
+  .setAdUnits('ccj-safety-tech', [
+    {
+      name: 'sponsor',
+      id: '606b737032dc3eefd3f5c0d5',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b74761949735714612c55',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b74a7194973f1ee612c68',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b74bb32dc3e247ff5c0f1',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b74ce194973af5d612c8d',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('ccj-weekend-edition', [
     {
       name: 'sponsor',
@@ -256,6 +388,39 @@ config
     {
       name: 'rotation-e',
       id: '5fd5163232dc3ef8a3f4092e',
+      width: 300,
+      height: 250,
+    },
+  ])
+
+  .setAdUnits('eqw-technology-weekly', [
+    {
+      name: 'sponsor',
+      id: '606b630e32dc3ef257f5bda1',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b63241949733d2e612a34',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b633232dc3ea73ff5bdbd',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b649b32dc3e22f7f5bdeb',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b64a9194973f43a612a74',
       width: 300,
       height: 250,
     },
@@ -436,6 +601,105 @@ config
     {
       name: 'fixed-c',
       id: '60137f9d32dc3e67cef5299f',
+      width: 300,
+      height: 250,
+    },
+  ])
+
+  .setAdUnits('ovd-maintenance-matters', [
+    {
+      name: 'sponsor',
+      id: '606b74f81949731b2d612c97',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b750b19497339eb612cbc',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b751b32dc3e8d54f5c128',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b7535194973ae3c612cd8',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b75551949737e22612ce2',
+      width: 300,
+      height: 250,
+    },
+  ])
+
+  .setAdUnits('ovd-new-entrant', [
+    {
+      name: 'sponsor',
+      id: '606b758d1949735859612cec',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b75a01949738c3a612d08',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b75af32dc3e5df9f5c183',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b75c51949734b6c612d1b',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b75d632dc3ec9ebf5c1a8',
+      width: 300,
+      height: 250,
+    },
+  ])
+
+  .setAdUnits('ovd-regulatory-rundown', [
+    {
+      name: 'sponsor',
+      id: '606b75ee32dc3e6e93f5c1c4',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b75ff1949737807612d37',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b760d32dc3e87c8f5c1d7',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b761619497324a8612d53',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b762c1949738277612d6f',
       width: 300,
       height: 250,
     },
@@ -691,6 +955,39 @@ config
     {
       name: 'rotation-e',
       id: '5fd5242e19497372645f7f4e',
+      width: 300,
+      height: 250,
+    },
+  ])
+
+  .setAdUnits('tps-maintenance-matters', [
+    {
+      name: 'sponsor',
+      id: '606b764e194973fe2c612d82',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b765e1949732aca612d8c',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b76721949730528612d9f',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b768d32dc3e1188f5c229',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b76a032dc3e0797f5c23c',
       width: 300,
       height: 250,
     },

@@ -23,6 +23,22 @@ const config = {
     name: 'Equipment Weekly',
     ...brands.ccj,
   },
+  'ccj-final-mile': {
+    name: 'Final Mile',
+    ...brands.ccj,
+  },
+  'ccj-maintenance-matters': {
+    name: 'Maintenance Matters',
+    ...brands.ccj,
+  },
+  'ccj-regulatory-rundown': {
+    name: 'Regulatory Rundown',
+    ...brands.ccj,
+  },
+  'ccj-safety-tech': {
+    name: 'Safety Tech',
+    ...brands.ccj,
+  },
   'ccj-technology-weekly': {
     name: 'Technology Weekly',
     ...brands.ccj,
@@ -43,6 +59,10 @@ const config = {
     name: 'Daily Report',
     ...brands.eqw,
   },
+  'eqw-technology-weekly': {
+    name: 'Technology Weekly',
+    ...brands.ovd,
+  },
   'eqw-weekend-edition': {
     name: 'Weekend Edition',
     ...brands.eqw,
@@ -61,6 +81,18 @@ const config = {
   },
   'ovd-daily': {
     name: 'Daily Report',
+    ...brands.ovd,
+  },
+  'ovd-maintenance-matters': {
+    name: 'Maintenance Matters',
+    ...brands.ovd,
+  },
+  'ovd-new-entrant': {
+    name: 'New Entrant',
+    ...brands.ovd,
+  },
+  'ovd-regulatory-rundown': {
+    name: 'Regulatory Rundown',
     ...brands.ovd,
   },
   'ovd-weekend-edition': {
@@ -93,6 +125,10 @@ const config = {
   },
   'tps-daily': {
     name: 'Daily Report',
+    ...brands.tps,
+  },
+  'tps-maintenance-matters': {
+    name: 'Maintenance Matters',
     ...brands.tps,
   },
   'tps-successful-dealer': {
