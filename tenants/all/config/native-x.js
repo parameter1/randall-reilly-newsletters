@@ -162,6 +162,14 @@ module.exports = {
       'rotation-d': '606b6eeb0fcde20001fbc3e8',
       'featured-resources': '606b6eef87b65100012bc14f',
     },
+    'ovd-regulatory-rundown': {
+      sponsor: '606b700f87b65100012bc7b1',
+      'rotation-a': '606b70130fcde20001fbca79',
+      'rotation-b': '606b701526c41a00014c6319',
+      'rotation-c': '606b70190fcde20001fbcaa5',
+      'rotation-d': '606b701c26c41a00014c6331',
+      'featured-resources': '606b701f23da7200014b843d',
+    },
     'ovd-weekend-edition': {
       sponsor: '5fd192ccc19f3b0001d71741',
       'rotation-a': '5fd192d7b192ef00018433d0',

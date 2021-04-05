@@ -91,6 +91,10 @@ const config = {
     name: 'New Entrant',
     ...brands.ovd,
   },
+  'ovd-regulatory-rundown': {
+    name: 'Regulatory Rundown',
+    ...brands.ovd,
+  },
   'ovd-weekend-edition': {
     name: 'Weekend Edition',
     ...brands.ovd,

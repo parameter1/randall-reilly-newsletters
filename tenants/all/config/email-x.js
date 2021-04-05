@@ -672,6 +672,39 @@ config
     },
   ])
 
+  .setAdUnits('ovd-regulatory-rundown', [
+    {
+      name: 'sponsor',
+      id: '606b75ee32dc3e6e93f5c1c4',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b75ff1949737807612d37',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b760d32dc3e87c8f5c1d7',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b761619497324a8612d53',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b762c1949738277612d6f',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('ovd-weekend-edition', [
     {
       name: 'sponsor',
