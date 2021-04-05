@@ -83,6 +83,10 @@ const config = {
     name: 'Daily Report',
     ...brands.ovd,
   },
+  'ovd-maintenance-matters': {
+    name: 'Maintenance Matters',
+    ...brands.ovd,
+  },
   'ovd-weekend-edition': {
     name: 'Weekend Edition',
     ...brands.ovd,

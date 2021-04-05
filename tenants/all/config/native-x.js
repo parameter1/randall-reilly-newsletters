@@ -146,6 +146,14 @@ module.exports = {
       'fixed-b': '5fe10bee0f96a200018264ae',
       'fixed-c': '5fe10bf30f96a200018264b8',
     },
+    'ovd-maintenance-matters': {
+      sponsor: '606b6e910fcde20001fbc163',
+      'rotation-a': '606b6e9423da7200014b7ae9',
+      'rotation-b': '606b6e9726c41a00014c5a23',
+      'rotation-c': '606b6e9a87b65100012bbf21',
+      'rotation-d': '606b6e9d23da7200014b7b48',
+      'featured-resources': '606b6ea226c41a00014c5a9c',
+    },
     'ovd-weekend-edition': {
       sponsor: '5fd192ccc19f3b0001d71741',
       'rotation-a': '5fd192d7b192ef00018433d0',

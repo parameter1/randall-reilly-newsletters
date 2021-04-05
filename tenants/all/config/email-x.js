@@ -606,6 +606,39 @@ config
     },
   ])
 
+  .setAdUnits('ovd-maintenance-matters', [
+    {
+      name: 'sponsor',
+      id: '606b74f81949731b2d612c97',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b750b19497339eb612cbc',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b751b32dc3e8d54f5c128',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b7535194973ae3c612cd8',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b75551949737e22612ce2',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('ovd-weekend-edition', [
     {
       name: 'sponsor',
