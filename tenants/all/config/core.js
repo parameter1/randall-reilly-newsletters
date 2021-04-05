@@ -127,6 +127,10 @@ const config = {
     name: 'Daily Report',
     ...brands.tps,
   },
+  'tps-maintenance-matters': {
+    name: 'Maintenance Matters',
+    ...brands.tps,
+  },
   'tps-successful-dealer': {
     name: 'Successful Dealer',
     ...brands.tps,

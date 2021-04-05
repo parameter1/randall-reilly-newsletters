@@ -229,6 +229,14 @@ module.exports = {
       'rotation-e': '5fd5025ab192ef00018456c2',
       'featured-resources': '6036cecf7b6728000191fc0f',
     },
+    'tps-maintenance-matters': {
+      sponsor: '606b70ca87b65100012bcc61',
+      'rotation-a': '606b70cd87b65100012bcc7a',
+      'rotation-b': '606b70d026c41a00014c673d',
+      'rotation-c': '606b70d40fcde20001fbcf6a',
+      'rotation-d': '606b70d726c41a00014c6788',
+      'featured-resources': '606b70da23da7200014b88ed',
+    },
     'tps-successful-dealer': {
       sponsor: '5fd502991305250001369f1f',
       'rotation-a': '5fd5029c1305250001369f29',

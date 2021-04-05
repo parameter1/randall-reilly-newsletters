@@ -960,6 +960,39 @@ config
     },
   ])
 
+  .setAdUnits('tps-maintenance-matters', [
+    {
+      name: 'sponsor',
+      id: '606b764e194973fe2c612d82',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b765e1949732aca612d8c',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b76721949730528612d9f',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b768d32dc3e1188f5c229',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b76a032dc3e0797f5c23c',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('tps-successful-dealer', [
     {
       name: 'sponsor',
