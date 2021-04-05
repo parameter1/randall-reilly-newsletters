@@ -150,6 +150,39 @@ config
     },
   ])
 
+  .setAdUnits('ccj-maintenance-matters', [
+    {
+      name: 'sponsor',
+      id: '606b725632dc3e945ef5c047',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b7269194973173a612bc2',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b72791949735cb2612bcc',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b728a32dc3efd90f5c06c',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b729d32dc3e5620f5c076',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('ccj-weekend-edition', [
     {
       name: 'sponsor',

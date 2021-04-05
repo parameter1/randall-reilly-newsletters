@@ -29,6 +29,14 @@ module.exports = {
       'rotation-d': '606b6e2d26c41a00014c576f',
       'featured-resources': '606b6e3123da7200014b78b3',
     },
+    'ccj-maintenance-matters': {
+      sponsor: '606b6c380fcde20001fbb292',
+      'rotation-a': '606b6c4f26c41a00014c4c3a',
+      'rotation-b': '606b6c5c0fcde20001fbb3c1',
+      'rotation-c': '606b6c5f26c41a00014c4ca0',
+      'rotation-d': '606b6c640fcde20001fbb3f7',
+      'featured-resources': '606b6c6723da7200014b6e0c',
+    },
     'ccj-technology-weekly': {
       sponsor: '5fd3bbebb192ef00018448bd',
       'rotation-a': '5fd3bbee1305250001369130',

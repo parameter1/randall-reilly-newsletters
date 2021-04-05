@@ -27,6 +27,10 @@ const config = {
     name: 'Final Mile',
     ...brands.ccj,
   },
+  'ccj-maintenance-matters': {
+    name: 'Maintenance Matters',
+    ...brands.ccj,
+  },
   'ccj-technology-weekly': {
     name: 'Technology Weekly',
     ...brands.ccj,
