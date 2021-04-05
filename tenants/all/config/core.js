@@ -43,6 +43,10 @@ const config = {
     name: 'Daily Report',
     ...brands.eqw,
   },
+  'eqw-technology-weekly': {
+    name: 'Technology Weekly',
+    ...brands.ovd,
+  },
   'eqw-weekend-edition': {
     name: 'Weekend Edition',
     ...brands.eqw,

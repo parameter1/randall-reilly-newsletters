@@ -261,6 +261,39 @@ config
     },
   ])
 
+  .setAdUnits('eqw-technology-weekly', [
+    {
+      name: 'sponsor',
+      id: '606b630e32dc3ef257f5bda1',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b63241949733d2e612a34',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b633232dc3ea73ff5bdbd',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b649b32dc3e22f7f5bdeb',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b64a9194973f43a612a74',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('eqw-weekend-edition', [
     {
       name: 'sponsor',

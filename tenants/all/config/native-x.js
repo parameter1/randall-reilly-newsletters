@@ -63,6 +63,14 @@ module.exports = {
       'rotation-e': '5fd3bdf613052500013692e2',
       'featured-resources': '6036ce29f71fd900012b2fd0',
     },
+    'eqw-technology-weekly': {
+      sponsor: '606b63e623da7200014b3b7f',
+      'rotation-a': '606b63ed26c41a00014c19e5',
+      'rotation-b': '606b63f523da7200014b3c03',
+      'rotation-c': '606b63fb26c41a00014c1a57',
+      'rotation-d': '606b640187b65100012b7e7b',
+      'featured-resources': '606b669a87b65100012b8d79',
+    },
     'eqw-weekend-edition': {
       sponsor: '5fd3bde513052500013692b3',
       'rotation-a': '5fd3bde9b192ef0001844a35',
