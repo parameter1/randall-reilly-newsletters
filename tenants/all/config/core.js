@@ -23,6 +23,10 @@ const config = {
     name: 'Equipment Weekly',
     ...brands.ccj,
   },
+  'ccj-final-mile': {
+    name: 'Final Mile',
+    ...brands.ccj,
+  },
   'ccj-technology-weekly': {
     name: 'Technology Weekly',
     ...brands.ccj,

@@ -117,6 +117,39 @@ config
     },
   ])
 
+  .setAdUnits('ccj-final-mile', [
+    {
+      name: 'sponsor',
+      id: '606b71e332dc3e8fe3f5bfe8',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '606b71f732dc3e6c48f5bff2',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '606b720b32dc3e8109f5c00e',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '606b722232dc3e157ff5c018',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '606b723632dc3eb5a3f5c034',
+      width: 300,
+      height: 250,
+    },
+  ])
+
   .setAdUnits('ccj-weekend-edition', [
     {
       name: 'sponsor',
