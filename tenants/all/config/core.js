@@ -61,7 +61,7 @@ const config = {
   },
   'eqw-technology-weekly': {
     name: 'Technology Weekly',
-    ...brands.ovd,
+    ...brands.eqw,
   },
   'eqw-weekend-edition': {
     name: 'Weekend Edition',
