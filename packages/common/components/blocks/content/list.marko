@@ -5,8 +5,10 @@ import queryFragment from "@randall-reilly/package-common/graphql/fragments/cont
 $ const { sectionName, date, newsletter } = input;
 
 $ const withImage = defaultValue(input.withImage, false);
+$ const imagePosition = defaultValue(input.imagePosition, 'right');
 $ const withHeader = defaultValue(input.withHeader, false);
 $ const withSection = defaultValue(input.withSection, true);
+$ const continueReading = defaultValue(input.continueReading, false);
 
 $ const queryParams = {
   date: date.valueOf(),
@@ -23,7 +25,13 @@ $ const queryParams = {
       <common-list-header-element title=sectionName />
     </if>
     <for|content| of=nodes>
-      <common-content-list-item-block content=content with-section=withSection with-image=withImage />
+      <common-content-list-item-block
+        content=content
+        with-section=withSection
+        with-image=withImage
+        image-position=imagePosition
+        continue-reading=continueReading
+      />
     </for>
   </if>
 </marko-web-query>
