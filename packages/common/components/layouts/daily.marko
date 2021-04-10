@@ -48,6 +48,7 @@ $ const continueReading = get(req, 'query.continue-reading') || false;
           section-name="Top Story"
           newsletter=newsletter
           with-image=true
+          image-position='top'
           limit=1
         />
 
@@ -66,7 +67,9 @@ $ const continueReading = get(req, 'query.continue-reading') || false;
           date=date
           section-name="Main"
           newsletter=newsletter
-          with-image=false
+          with-image=withImage
+          image-position='right'
+          continue-reading=continueReading
           limit=2
           skip=0
         />
@@ -86,7 +89,9 @@ $ const continueReading = get(req, 'query.continue-reading') || false;
           date=date
           section-name="Main"
           newsletter=newsletter
-          with-image=false
+          with-image=withImage
+          image-position='right'
+          continue-reading=continueReading
           limit=2
           skip=2
         />
@@ -106,7 +111,9 @@ $ const continueReading = get(req, 'query.continue-reading') || false;
           date=date
           section-name="Main"
           newsletter=newsletter
-          with-image=false
+          with-image=withImage
+          image-position='right'
+          continue-reading=continueReading
           limit=1
           skip=4
         />
@@ -133,7 +140,9 @@ $ const continueReading = get(req, 'query.continue-reading') || false;
           date=date
           section-name="Main"
           newsletter=newsletter
-          with-image=false
+          with-image=withImage
+          image-position='right'
+          continue-reading=continueReading
           limit=1
           skip=5
         />
@@ -154,6 +163,8 @@ $ const continueReading = get(req, 'query.continue-reading') || false;
           section-name="Main"
           newsletter=newsletter
           with-image=true
+          image-position='top'
+          continue-reading=continueReading
           limit=1
           skip=6
         />

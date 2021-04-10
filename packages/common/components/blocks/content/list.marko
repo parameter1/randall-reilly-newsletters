@@ -25,7 +25,13 @@ $ const queryParams = {
       <common-list-header-element title=sectionName />
     </if>
     <for|content| of=nodes>
-      <common-content-list-item-block content=content with-section=withSection with-image=withImage />
+      <common-content-list-item-block
+        content=content
+        with-section=withSection
+        with-image=withImage
+        image-position=imagePosition
+        continue-reading=continueReading
+      />
     </for>
   </if>
 </marko-web-query>
