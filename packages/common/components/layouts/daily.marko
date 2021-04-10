@@ -2,7 +2,7 @@ import queryFragment from "@randall-reilly/package-common/graphql/fragments/cont
 import rotateArray from "@randall-reilly/package-common/utils/rotate-array";
 import { get } from "@parameter1/base-cms-object-path";
 
-$ const { website, config } = out.global;
+$ const { website, config, req } = out.global;
 $ const { newsletter, date } = input.data;
 
 $ const emailX = config.get("emailX");
@@ -10,6 +10,9 @@ $ const nativeX = config.getAsObject("nativeX");
 $ const dayOfWeek = new Date(date).getDay() || 7;
 $ const adUnits = ["rotation-a", "rotation-e", "rotation-d", "rotation-c", "rotation-b"];
 $ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
+
+$ const withImage = get(req, 'query.with-image') || false;
+$ const continueReading = get(req, 'query.continue-reading') || false;
 
 <marko-newsletter-root
   title=newsletter.name

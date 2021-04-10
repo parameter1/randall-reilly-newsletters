@@ -4,7 +4,9 @@ import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 $ const { content } = input;
 
 $ const withImage = defaultValue(input.withImage, false);
+$ const imagePosition = defaultValue(input.imagePosition, 'right');
 $ const withSection = defaultValue(input.withSection, true);
+$ const continueReading = defaultValue(input.continueReading, false);
 
 $ const imgStyles = {
   "border": 0,
