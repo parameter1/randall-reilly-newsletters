@@ -1,9 +1,10 @@
 import { get } from "@parameter1/base-cms-object-path";
+import { parseBooleanHeader } from "@parameter1/base-cms-utils";
 import queryFragment from "@randall-reilly/package-common/graphql/fragments/content-list";
 import rotateArray from "@randall-reilly/package-common/utils/rotate-array";
 import moment from "moment";
 
-$ const { website, config } = out.global;
+$ const { website, config, req } = out.global;
 $ const { newsletter, date } = input.data;
 
 $ const emailX = config.get('emailX');
@@ -12,6 +13,9 @@ $ const nativeX = config.getAsObject("nativeX");
 $ const weekOfYear = moment(new Date(date)).week();
 $ const adUnits = ['rotation-a', 'rotation-d', 'rotation-c', 'rotation-b'];
 $ const adSlots = rotateArray(adUnits, weekOfYear - 1);
+
+$ const withImage = parseBooleanHeader(get(req, 'query.with-image'));
+$ const continueReading = parseBooleanHeader(get(req, 'query.continue-reading'));
 
 <marko-newsletter-root
   title=newsletter.name
@@ -47,6 +51,7 @@ $ const adSlots = rotateArray(adUnits, weekOfYear - 1);
           section-name="Top Story"
           newsletter=newsletter
           with-image=true
+          image-position="top"
           limit=1
         />
 
@@ -65,7 +70,9 @@ $ const adSlots = rotateArray(adUnits, weekOfYear - 1);
           date=date
           section-name="Main"
           newsletter=newsletter
-          with-image=false
+          with-image=withImage
+          image-position='right'
+          continue-reading=continueReading
           limit=2
           skip=0
         />
@@ -85,7 +92,9 @@ $ const adSlots = rotateArray(adUnits, weekOfYear - 1);
           date=date
           section-name="Main"
           newsletter=newsletter
-          with-image=false
+          with-image=withImage
+          image-position='right'
+          continue-reading=continueReading
           limit=2
           skip=2
         />
@@ -105,7 +114,9 @@ $ const adSlots = rotateArray(adUnits, weekOfYear - 1);
           date=date
           section-name="Main"
           newsletter=newsletter
-          with-image=false
+          with-image=withImage
+          image-position='right'
+          continue-reading=continueReading
           limit=1
           skip=4
         />
@@ -132,7 +143,9 @@ $ const adSlots = rotateArray(adUnits, weekOfYear - 1);
           date=date
           section-name="Main"
           newsletter=newsletter
-          with-image=false
+          with-image=withImage
+          image-position='right'
+          continue-reading=continueReading
           limit=2
           skip=5
         />
@@ -143,6 +156,8 @@ $ const adSlots = rotateArray(adUnits, weekOfYear - 1);
           section-name="Main"
           newsletter=newsletter
           with-image=true
+          image-position='top'
+          continue-reading=continueReading
           limit=1
           skip=6
         />
