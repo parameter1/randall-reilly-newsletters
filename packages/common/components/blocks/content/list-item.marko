@@ -2,7 +2,7 @@ import { get, getAsArray } from "@parameter1/base-cms-object-path";
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 import { URLSearchParams } from "url";
 
-$ const { content } = input;
+$ const { content, urlParams } = input;
 
 $ const withImage = defaultValue(input.withImage, false);
 $ const imagePosition = defaultValue(input.imagePosition, 'right');
@@ -10,10 +10,8 @@ $ const withSection = defaultValue(input.withSection, true);
 $ const continueReading = defaultValue(input.continueReading, false);
 
 $ {
-  const urlParams = defaultValue(input.urlParams, false);
   if (urlParams && content.type !== 'promotion') {
-    const queryString = new URLSearchParams(urlParams).toString();
-    content.siteContext.url += `?${queryString}`;
+    content.siteContext.url += `?${new URLSearchParams(urlParams)}`;
   }
 }
 
