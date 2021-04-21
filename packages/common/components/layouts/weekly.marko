@@ -7,15 +7,15 @@ import moment from "moment";
 $ const { website, config, req } = out.global;
 $ const { newsletter, date } = input.data;
 
-$ const emailX = config.get('emailX');
+$ const emailX = config.get("emailX");
 $ const nativeX = config.getAsObject("nativeX");
 
 $ const weekOfYear = moment(new Date(date)).week();
-$ const adUnits = ['rotation-a', 'rotation-d', 'rotation-c', 'rotation-b'];
+$ const adUnits = ["rotation-a", "rotation-d", "rotation-c", "rotation-b"];
 $ const adSlots = rotateArray(adUnits, weekOfYear - 1);
 
-$ const withImage = parseBooleanHeader(get(req, 'query.with-image'));
-$ const continueReading = parseBooleanHeader(get(req, 'query.continue-reading'));
+$ const withImage = parseBooleanHeader(get(req, "query.with-image"));
+$ const continueReading = parseBooleanHeader(get(req, "query.continue-reading"));
 
 <marko-newsletter-root
   title=newsletter.name
