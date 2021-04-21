@@ -7,15 +7,18 @@ import moment from "moment";
 $ const { website, config, req } = out.global;
 $ const { newsletter, date } = input.data;
 
-$ const emailX = config.get('emailX');
+$ const emailX = config.get("emailX");
 $ const nativeX = config.getAsObject("nativeX");
 
 $ const weekOfYear = moment(new Date(date)).week();
-$ const adUnits = ['rotation-a', 'rotation-d', 'rotation-c', 'rotation-b'];
+$ const adUnits = ["rotation-a", "rotation-d", "rotation-c", "rotation-b"];
 $ const adSlots = rotateArray(adUnits, weekOfYear - 1);
 
-$ const withImage = parseBooleanHeader(get(req, 'query.with-image'));
-$ const continueReading = parseBooleanHeader(get(req, 'query.continue-reading'));
+$ const withImage = parseBooleanHeader(get(req, "query.with-image"));
+$ const continueReading = parseBooleanHeader(get(req, "query.continue-reading"));
+
+$ const utmTerm = get(req, "query.utm_term");
+$ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
 
 <marko-newsletter-root
   title=newsletter.name
@@ -52,6 +55,7 @@ $ const continueReading = parseBooleanHeader(get(req, 'query.continue-reading'))
           newsletter=newsletter
           with-image=true
           image-position="top"
+          url-params=urlParams
           limit=1
         />
 
@@ -73,6 +77,7 @@ $ const continueReading = parseBooleanHeader(get(req, 'query.continue-reading'))
           with-image=withImage
           image-position='right'
           continue-reading=continueReading
+          url-params=urlParams
           limit=2
           skip=0
         />
@@ -95,6 +100,7 @@ $ const continueReading = parseBooleanHeader(get(req, 'query.continue-reading'))
           with-image=withImage
           image-position='right'
           continue-reading=continueReading
+          url-params=urlParams
           limit=2
           skip=2
         />
@@ -117,6 +123,7 @@ $ const continueReading = parseBooleanHeader(get(req, 'query.continue-reading'))
           with-image=withImage
           image-position='right'
           continue-reading=continueReading
+          url-params=urlParams
           limit=1
           skip=4
         />
@@ -146,6 +153,7 @@ $ const continueReading = parseBooleanHeader(get(req, 'query.continue-reading'))
           with-image=withImage
           image-position='right'
           continue-reading=continueReading
+          url-params=urlParams
           limit=2
           skip=5
         />
@@ -158,6 +166,7 @@ $ const continueReading = parseBooleanHeader(get(req, 'query.continue-reading'))
           with-image=true
           image-position='top'
           continue-reading=continueReading
+          url-params=urlParams
           limit=1
           skip=6
         />
