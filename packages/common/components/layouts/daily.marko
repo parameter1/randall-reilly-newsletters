@@ -20,8 +20,6 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
 
 $ const layout = get(req, "query.layout") || "daily";
 
-$ console.log(layout);
-
 <if(layout === 'daily-2')>
   <common-daily-2-layout data=input.data />
 </if>
