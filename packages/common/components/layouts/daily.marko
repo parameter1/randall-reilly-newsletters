@@ -19,6 +19,7 @@ $ const utmTerm = get(req, "query.utm_term");
 $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
 
 $ const layout = get(req, "query.layout") || "daily";
+$ const topStoryImage = input.topStoryImage || false;
 
 <if(layout === 'daily-2')>
   <common-daily-2-layout data=input.data />
