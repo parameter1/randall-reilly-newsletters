@@ -6,7 +6,6 @@ $ const { newsletter, date } = input.data;
 
 $ const emailX = config.get('emailX');
 $ const nativeX = config.getAsObject("nativeX");
-$ const topStoryImage = input.topStoryImage || false;
 
 <marko-newsletter-root
   title=newsletter.name
@@ -34,7 +33,7 @@ $ const topStoryImage = input.topStoryImage || false;
           date=date
           section-name="Top Story"
           newsletter=newsletter
-          with-image=topStoryImage
+          with-image=true
           limit=1
         />
       </@body>

@@ -17,7 +17,6 @@ $ const continueReading = parseBooleanHeader(get(req, "query.continue-reading"))
 
 $ const utmTerm = get(req, "query.utm_term");
 $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
-$ const topStoryImage = input.topStoryImage || false;
 
 <marko-newsletter-root
   title=newsletter.name
@@ -52,7 +51,7 @@ $ const topStoryImage = input.topStoryImage || false;
           date=date
           section-name="Top Story"
           newsletter=newsletter
-          with-image=topStoryImage
+          with-image=true
           image-position='right'
           continue-reading=continueReading
           url-params=urlParams
