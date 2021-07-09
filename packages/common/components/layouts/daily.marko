@@ -19,7 +19,6 @@ $ const utmTerm = get(req, "query.utm_term");
 $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
 
 $ const layout = get(req, "query.layout") || "daily";
-$ const topStoryImage = input.topStoryImage || false;
 
 <if(layout === 'daily-2')>
   <common-daily-2-layout data=input.data />
@@ -58,7 +57,7 @@ $ const topStoryImage = input.topStoryImage || false;
             date=date
             section-name="Top Story"
             newsletter=newsletter
-            with-image=topStoryImage
+            with-image=true
             image-position='top'
             url-params=urlParams
             limit=1
