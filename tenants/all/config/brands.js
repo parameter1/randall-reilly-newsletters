@@ -1,7 +1,7 @@
 module.exports = {
   ccj: {
     brandName: 'Commercial Carrier Journal',
-    logoSrc: '/files/base/randallreilly/all/image/static/ccj/ccj-logo-white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/ccj/ccj-white-logo.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=ccj_subscriptions',
     contactLinks: [
       { href: 'https://www.ccjdigital.com/page/advertise', label: 'Advertising' },
@@ -19,7 +19,7 @@ module.exports = {
   },
   eqw: {
     brandName: 'Equipment World',
-    logoSrc: '/files/base/randallreilly/all/image/static/eqw/eqw-logo-white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/eqw/ew-white-logo.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=eqw_subscriptions',
     contactLinks: [
       { href: 'https://www.equipmentworld.com/page/advertise', label: 'Advertising' },
@@ -37,7 +37,7 @@ module.exports = {
   },
   ovd: {
     brandName: 'Overdrive',
-    logoSrc: '/files/base/randallreilly/all/image/static/ovd_logo_white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/ovd/ovd-white-logo.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=ov_subscriptions',
     tagline: 'The Voice of the American Trucker',
     contactLinks: [
@@ -57,7 +57,7 @@ module.exports = {
   },
   tlc: {
     brandName: 'Total Landscape Care',
-    logoSrc: '/files/base/randallreilly/all/image/static/tlc/tlc-logo-white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/tlc/tlc-white-logo.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=tlc_subscriptions',
     contactLinks: [
       { href: 'https://www.totallandscapecare.com/page/advertise', label: 'Advertising' },
@@ -93,7 +93,7 @@ module.exports = {
   },
   tps: {
     brandName: 'Trucks, Parts, Service',
-    logoSrc: '/files/base/randallreilly/all/image/static/tps/tps-logo-white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/tps/tps-white-logo.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=tps_subscriptions',
     contactLinks: [
       { href: 'https://www.truckpartsandservice.com/page/advertise', label: 'Advertising' },
@@ -111,7 +111,7 @@ module.exports = {
   },
   hwt: {
     brandName: 'Hard Working Trucks',
-    logoSrc: '/files/base/randallreilly/all/image/static/hwt/hwt-logo-white.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/hwt/hwt-white-logo.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=hwt_subscriptions',
     contactLinks: [
       { href: 'https://www.hardworkingtrucks.com/page/advertise', label: 'Advertising' },
