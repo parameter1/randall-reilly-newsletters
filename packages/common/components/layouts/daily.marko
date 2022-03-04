@@ -87,6 +87,15 @@ $ const layout = get(req, "query.layout") || "daily";
             skip=0
           />
 
+          <!-- Partner Insights / Promotion block -->
+          <common-ad-wrapper-block
+            date=date
+            section-name="Partner Insights"
+            newsletter=newsletter
+            promotion-component="native-block"
+            placement-id=get(nativeX, `placements.${newsletter.alias}.partner-insights`)
+          />
+
           <!-- Advertisement / Promotion block -->
           <common-ad-wrapper-block
             date=date
