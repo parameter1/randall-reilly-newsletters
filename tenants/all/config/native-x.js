@@ -12,6 +12,7 @@ module.exports = {
       'rotation-d': '5fd273bab192ef0001843fff',
       'rotation-e': '5fd273c013052500013687df',
       'featured-resources': '6036bb5c7b6728000191584e',
+      'partner-insights': '62223cbda6cf630001dc67ed',
     },
     'ccj-equipment-weekly': {
       sponsor: '5fd3bb8fb192ef000184485c',
@@ -94,6 +95,7 @@ module.exports = {
       'rotation-d': '5fd3bdf2b192ef0001844a52',
       'rotation-e': '5fd3bdf613052500013692e2',
       'featured-resources': '6036ce29f71fd900012b2fd0',
+      'partner-insights': '62225104eb795800010e3506',
     },
     'eqw-technology-weekly': {
       sponsor: '606b63e623da7200014b3b7f',
@@ -139,6 +141,7 @@ module.exports = {
       'rotation-d': '5fd192e2b192ef00018433e3',
       'rotation-e': '5fd192e6c19f3b0001d7177a',
       'featured-resources': '6036ce6cb6775100015dfdeb',
+      'partner-insights': '62225055a6cf630001dcbdae',
     },
     'ovd-gear': {
       sponsor: '5fe10be30f96a20001826491',
@@ -187,6 +190,7 @@ module.exports = {
       'rotation-d': '5fd4fe0bb192ef000184555f',
       'rotation-e': '5fd4fe0fb192ef0001845572',
       'featured-resources': '6036ce997b6728000191f98a',
+      'partner-insights': '62225143a9db8a0001aa72be',
     },
     'tn-daily': {
       sponsor: '5fd50145b192ef00018455b8',
@@ -196,6 +200,7 @@ module.exports = {
       'rotation-d': '5fd501531305250001369de9',
       'rotation-e': '5fd5015bb192ef00018455e6',
       'featured-resources': '6036ceabb6775100015e001f',
+      'partner-insights': '6222517da6cf630001dcc300',
     },
     'tn-gear': {
       sponsor: '600c7ad9df7b8d00018c1781',
@@ -228,6 +233,7 @@ module.exports = {
       'rotation-d': '5fd502521305250001369ed5',
       'rotation-e': '5fd5025ab192ef00018456c2',
       'featured-resources': '6036cecf7b6728000191fc0f',
+      'partner-insights': '622250c7a6cf630001dcbf6f',
     },
     'tps-maintenance-matters': {
       sponsor: '606b70ca87b65100012bcc61',
