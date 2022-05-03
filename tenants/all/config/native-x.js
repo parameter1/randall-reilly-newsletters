@@ -157,7 +157,7 @@ module.exports = {
       'rotation-d': '606b6e9d23da7200014b7b48',
       'featured-resources': '606b6ea226c41a00014c5a9c',
     },
-    'ovd-new-entrant': {
+    'ovd-haul-with-authority': {
       sponsor: '606b6ed923da7200014b7cc8',
       'rotation-a': '606b6ede87b65100012bc0ca',
       'rotation-b': '606b6ee40fcde20001fbc3a2',
