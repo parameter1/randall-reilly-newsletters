@@ -639,7 +639,7 @@ config
     },
   ])
 
-  .setAdUnits('ovd-new-entrant', [
+  .setAdUnits('ovd-haul-with-authority', [
     {
       name: 'sponsor',
       id: '606b758d1949735859612cec',

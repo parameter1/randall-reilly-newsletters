@@ -87,8 +87,8 @@ const config = {
     name: 'Maintenance Matters',
     ...brands.ovd,
   },
-  'ovd-new-entrant': {
-    name: 'New Entrant',
+  'ovd-haul-with-authority': {
+    name: 'Haul with Authority',
     ...brands.ovd,
   },
   'ovd-regulatory-rundown': {
