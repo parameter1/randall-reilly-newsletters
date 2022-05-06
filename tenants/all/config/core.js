@@ -88,7 +88,7 @@ const config = {
     ...brands.ovd,
   },
   'ovd-haul-with-authority': {
-    name: 'Haul with Authority',
+    name: 'Haul With Authority',
     ...brands.ovd,
   },
   'ovd-regulatory-rundown': {
