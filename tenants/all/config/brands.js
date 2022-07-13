@@ -19,7 +19,7 @@ module.exports = {
   },
   eqw: {
     brandName: 'Equipment World',
-    logoSrc: '/files/base/randallreilly/all/image/static/eqw/ew-white-logo.png',
+    logoSrc: '/files/base/randallreilly/all/image/static/eqw/eqw-white-logo.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=eqw_subscriptions',
     contactLinks: [
       { href: 'https://www.equipmentworld.com/page/advertise', label: 'Advertising' },
