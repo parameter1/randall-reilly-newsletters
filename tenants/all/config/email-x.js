@@ -49,6 +49,12 @@ config
       width: 300,
       height: 250,
     },
+    {
+      name: 'ccj-overbook',
+      id: '633350d6f8a04018fc8e69dc',
+      width: 300,
+      height: 250,
+    },
   ])
 
   .setAdUnits('ccj-technology-weekly', [
