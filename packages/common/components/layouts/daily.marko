@@ -119,11 +119,13 @@ $ const layout = get(req, "query.layout") || "daily";
             skip=2
           />
 
-          <common-ad-wrapper-block
-            date=date
-            newsletter=newsletter
-            ad-unit=emailX.getAdUnit({ name: "ccj-overbook", alias: newsletter.alias })
-          />
+          <if(newsletter.alias === 'ccj-daily')>
+            <common-ad-wrapper-block
+              date=date
+              newsletter=newsletter
+              ad-unit=emailX.getAdUnit({ name: "ccj-overbook", alias: newsletter.alias })
+            />
+          </if>
 
           <!-- Advertisement / Promotion block -->
           <common-ad-wrapper-block
