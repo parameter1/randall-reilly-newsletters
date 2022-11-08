@@ -1,25 +1,20 @@
 import { get, getAsObject } from "@parameter1/base-cms-object-path";
-
 $ const { req } = out.global;
 $ const nativeAdLayout = get(req, "query.native-ad-layout");
 $ const newsletter = getAsObject(input, "newsletter");
-$ const { sectionName, date, content } = input;
-
+$ const { sectionName, date, content, dpmArgs } = input;
 $ const url = get(content, "siteContext.path");
 $ const company = getAsObject(content, "company");
-
 $ const imgStyles = {
   "font-size": "14px",
   "line-height": 0,
   "border": 0,
 };
-
 $ const imgLinkStyles = {
   "display": "block",
   "font-size": "14px",
   "line-height": 0,
 }
-
 <if(nativeAdLayout === 'a')>
   <tr>
     <td align="center" valign="top">
@@ -44,6 +39,9 @@ $ const imgLinkStyles = {
                       >
                         <@link href=url target="_blank" attrs={ style: imgLinkStyles } />
                       </marko-newsletter-imgix>
+                      <if(dpmArgs)>
+                        <marko-newsletters-omail-dpm ...dpmArgs />
+                      </if>
                     </marko-core-obj-value>
                   </td>
                   <td align="left" valign="top" class="split_cont1" dir="ltr">
@@ -51,6 +49,9 @@ $ const imgLinkStyles = {
                       <tr>
                         <td align="left" valign="top" style="font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;padding:0 24px 0 0;">
                           <a href=url target="_blank" style="font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;">${content.name}</a>
+                          <if(dpmArgs)>
+                            <marko-newsletters-omail-dpm ...dpmArgs />
+                          </if>
                         </td>
                       </tr>
                       <common-table-spacer-element height="12" />
@@ -65,6 +66,9 @@ $ const imgLinkStyles = {
                                   <a href=url target="_blank" style="line-height: 90px;color: #257478;text-decoration: none;">
                                     Presented by
                                   </a>
+                                  <if(dpmArgs)>
+                                    <marko-newsletters-omail-dpm ...dpmArgs />
+                                  </if>
                                 </td>
                                 <td>
                                   <marko-core-obj-value|{ value: image }| obj=content.company field="primaryImage" as="object">
@@ -85,6 +89,9 @@ $ const imgLinkStyles = {
                                         }
                                       />
                                     </marko-newsletter-imgix>
+                                    <if(dpmArgs)>
+                                      <marko-newsletters-omail-dpm ...dpmArgs />
+                                    </if>
                                   </marko-core-obj-value>
                                 </td>
                               </tr>
@@ -127,6 +134,9 @@ $ const imgLinkStyles = {
                       >
                         <@link href=url target="_blank" attrs={ style: imgLinkStyles } />
                       </marko-newsletter-imgix>
+                      <if(dpmArgs)>
+                        <marko-newsletters-omail-dpm ...dpmArgs />
+                      </if>
                     </marko-core-obj-value>
                   </td>
                   <td align="left" valign="top" class="split_cont1" dir="ltr">
@@ -142,6 +152,9 @@ $ const imgLinkStyles = {
                             >
                               <@link href=url target="_blank" attrs={ style: imgLinkStyles } />
                             </marko-newsletter-imgix>
+                            <if(dpmArgs)>
+                              <marko-newsletters-omail-dpm ...dpmArgs />
+                            </if>
                           </marko-core-obj-value>
                         </td>
                       </tr>
@@ -161,6 +174,9 @@ $ const imgLinkStyles = {
                               </tr>
                             </table>
                           </a>
+                          <if(dpmArgs)>
+                            <marko-newsletters-omail-dpm ...dpmArgs />
+                          </if>
                         </td>
                       </tr>
                     </table>
@@ -199,6 +215,9 @@ $ const imgLinkStyles = {
                       >
                         <@link href=url target="_blank" attrs={ style: imgLinkStyles } />
                       </marko-newsletter-imgix>
+                      <if(dpmArgs)>
+                        <marko-newsletters-omail-dpm ...dpmArgs />
+                      </if>
                     </marko-core-obj-value>
                   </td>
                   <td align="left" valign="top" class="split_cont1" dir="ltr">
@@ -214,6 +233,9 @@ $ const imgLinkStyles = {
                             >
                               <@link href=url target="_blank" attrs={ style: imgLinkStyles } />
                             </marko-newsletter-imgix>
+                            <if(dpmArgs)>
+                              <marko-newsletters-omail-dpm ...dpmArgs />
+                            </if>
                           </marko-core-obj-value>
                         </td>
                       </tr>
@@ -225,6 +247,9 @@ $ const imgLinkStyles = {
                       <tr>
                         <td align="left" valign="top" style="font-size: 17px;line-height: 22px;color: #3475b6;font-weight: 400;">
                           <a href=url target="_blank" style="text-decoration: none;color: #3475b6;padding:0 24px 0 0;">${content.name}</a>
+                          <if(dpmArgs)>
+                            <marko-newsletters-omail-dpm ...dpmArgs />
+                          </if>
                         </td>
                       </tr>
                     </table>
