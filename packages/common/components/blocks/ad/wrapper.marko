@@ -23,29 +23,12 @@ $ const PromotionComponent = promotionComponents[defaultValue(input.promotionCom
   <native-x-fetch|{ data }| uri=nativeX.uri date=date placement-id=placementId>
     <if(data)>
       <!-- $ const lcvDefaultValue = get(data, "advertiser.name"); -->
-      $ const dpmArgs = ["ln", "lc", "lcv", "lkw"].reduce((o, key) => {
-        // allow null to unset the default values.
-        if (data[key] === null) return { ...o, [key]: "" };
-
-        // otherwise treat all values as strings
-        const value = `${data[key] || ''}`;
-        if (!value) return o;
-        // if value is in the form of {some.path} (e.g. {ad.lineItemname})
-        // get the value off of the emailx response
-        // otherwise, treat the value as a literal string and use it
-        const matches = /^\{(.*)\}$/.exec(value);
-        if (matches && matches[1]) {
-          const v = get(data, matches[1]);
-          if (v) return { ...o, [key]: v };
-          return o;
-        }
-        return { ...o, [key]: value };
-      }, {
+      $ const dpmArgs = {
         lc: "Advertising",
         lkw: "sponsoredContent",
         ln: `${get(data, "advertiser.name" || "creative.name")}`,
         lcv: `${get(data, "campaign.name")}`,
-      });
+      };
 
       <${PromotionComponent}
         date=date
