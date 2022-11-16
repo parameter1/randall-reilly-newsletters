@@ -2,15 +2,17 @@ import { get } from "@parameter1/base-cms-object-path";
 import { parseBooleanHeader } from "@parameter1/base-cms-utils";
 import queryFragment from "@randall-reilly/package-common/graphql/fragments/content-list";
 import rotateArray from "@randall-reilly/package-common/utils/rotate-array";
+import moment from "moment";
 
 $ const { website, config, req } = out.global;
 $ const { newsletter, date } = input.data;
 
 $ const emailX = config.get("emailX");
 $ const nativeX = config.getAsObject("nativeX");
-$ const dayOfWeek = new Date(date).getDay() || 7;
-$ const adUnits = ["rotation-a", "rotation-e", "rotation-d", "rotation-c", "rotation-b"];
-$ const adSlots = rotateArray(adUnits, dayOfWeek - 1);
+
+$ const weekOfYear = moment(new Date(date)).week();
+$ const adUnits = ["rotation-a", "rotation-d", "rotation-c", "rotation-b"];
+$ const adSlots = rotateArray(adUnits, weekOfYear - 1);
 
 $ const withImage = parseBooleanHeader(get(req, "query.with-image"));
 $ const continueReading = parseBooleanHeader(get(req, "query.continue-reading"));
@@ -52,24 +54,10 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           section-name="Top Story"
           newsletter=newsletter
           with-image=true
-          image-position='right'
-          continue-reading=true
+          image-position="right"
           url-params=urlParams
           limit=1
-          skip=0
-        />
-
-        <!-- Content list block (no image) -->
-        <common-content-list-block
-          date=date
-          section-name="Main"
-          newsletter=newsletter
-          with-image=true
-          image-position='right'
-          continue-reading=true
-          url-params=urlParams
-          limit=1
-          skip=0
+          ...input.topStory
         />
 
         <!-- Advertisement / Promotion block -->
@@ -92,7 +80,7 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           continue-reading=true
           url-params=urlParams
           limit=2
-          skip=1
+          skip=0
         />
 
         <!-- Advertisement / Promotion block -->
@@ -115,7 +103,7 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           continue-reading=true
           url-params=urlParams
           limit=2
-          skip=3
+          skip=2
         />
 
         <!-- Advertisement / Promotion block -->
@@ -123,7 +111,7 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           date=date
           section-name="Rotation C"
           newsletter=newsletter
-          promotion-component="native-block"
+          promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[2], alias: newsletter.alias })
           placement-id=get(nativeX, `placements.${newsletter.alias}.${adSlots[2]}`)
         />
@@ -138,7 +126,7 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           continue-reading=true
           url-params=urlParams
           limit=1
-          skip=5
+          skip=4
         />
 
         <!-- Data snapshot block -->
@@ -167,18 +155,8 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           image-position='right'
           continue-reading=true
           url-params=urlParams
-          limit=1
-          skip=6
-        />
-
-        <!-- Advertisement / Promotion block -->
-        <common-ad-wrapper-block
-          date=date
-          section-name="Rotation E"
-          newsletter=newsletter
-          promotion-component="advertisement-block"
-          ad-unit=emailX.getAdUnit({ name: adSlots[4], alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.${adSlots[4]}`)
+          limit=2
+          skip=5
         />
 
         <!-- Content list block (with image) -->
@@ -199,7 +177,8 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           date=date
           section-name="Featured Resources"
           newsletter=newsletter
-          with-image=false
+          with-image=true
+          image-position='right'
           with-header=true
           limit=3
           skip=0
