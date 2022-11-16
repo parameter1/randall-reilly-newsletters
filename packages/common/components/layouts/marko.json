@@ -13,5 +13,8 @@
   },
   "<common-weekly-layout>": {
     "template": "./weekly.marko"
+  },
+  "<common-weekly-2-layout>": {
+    "template": "./weekly-2.marko"
   }
 }
