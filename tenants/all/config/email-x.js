@@ -1063,6 +1063,45 @@ config
       width: 300,
       height: 250,
     },
+  ])
+
+  .setAdUnits('conexpo-special-report', [
+    {
+      name: 'sponsor',
+      id: '63b7975647368766734c76c4',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '63b7976a2388ea48e0045c09',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '63b7977e4736872cf14c76e0',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '63b797952388ea3f43045c1c',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '63b797a82388ea170b045c2f',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-e',
+      id: '63b797b84736871d7f4c770e',
+      width: 300,
+      height: 250,
+    },
   ]);
 
 module.exports = config;
