@@ -259,5 +259,15 @@ module.exports = {
       'rotation-d': '5fd503001305250001369f88',
       'featured-resources': '6036cecf7b6728000191fc0f',
     },
+    'conexpo-special-report': {
+      sponsor: '63b7984c31101300014f7ec7',
+      'rotation-a': '63b7986f5aa99e0001beeb1a',
+      'rotation-b': '63b798825aa99e0001beebd3',
+      'rotation-c': '63b7988c9029c3000164d00a',
+      'rotation-d': '63b7989331101300014f80df',
+      'rotation-e': '63b7989931101300014f8114',
+      'featured-resources': '63b798a031101300014f8132',
+      'partner-insights': '63b798a851d38c00018ad9a2',
+    },
   },
 };
