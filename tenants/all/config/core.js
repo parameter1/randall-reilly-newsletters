@@ -139,6 +139,10 @@ const config = {
     name: 'Weekly Report',
     ...brands.tps,
   },
+  'conexpo-special-report': {
+    name: 'CONEXPO Special Report',
+    ...brands.eqw,
+  },
 };
 
 module.exports = config;
