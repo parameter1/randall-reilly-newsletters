@@ -6,6 +6,7 @@ $ const newsletterConfig = config.get(newsletter.alias);
 $ const tagline = get(newsletterConfig, "tagline");
 $ const subscribeLink = get(newsletterConfig, "subscribeLink");
 $ const publicationName = website.get("name");
+$ const unsubscribeLink = get(newsletterConfig, "unsubscribeLink");
 
 $ const standardStyle = {
   "font-size": "17px",
@@ -145,13 +146,24 @@ $ const stealthLinkStyle = {
                   </td>
                 </tr>
                 <common-table-spacer-element height="19" />
-                <tr>
-                  <td align="left" valign="top" style=smallerStyle>
-                    <a href="@{confirmunsubscribelink}@" style=smallerUnderlineStyle>
-                      Unsubscribe here
-                    </a>
-                  </td>
-                </tr>
+                <if(unsubscribeLink)>
+                  <tr>
+                    <td align="left" valign="top" style=smallerStyle>
+                      <a href=unsubscribeLink style=smallerUnderlineStyle>
+                        Unsubscribe here
+                      </a>
+                    </td>
+                  </tr>
+                </if>
+                <else>
+                  <tr>
+                    <td align="left" valign="top" style=smallerStyle>
+                      <a href="@{confirmunsubscribelink}@" style=smallerUnderlineStyle>
+                        Unsubscribe here
+                      </a>
+                    </td>
+                  </tr>
+                </else>
                 <common-table-spacer-element height="19" />
                 <tr>
                   <td align="left" valign="top" style=smallerStyle>
