@@ -95,6 +95,15 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           skip=1
         />
 
+        <!-- Partner Insights / Promotion block -->
+        <common-ad-wrapper-block
+          date=date
+          section-name="Partner Insights"
+          newsletter=newsletter
+          promotion-component="native-block"
+          placement-id=get(nativeX, `placements.${newsletter.alias}.partner-insights`)
+        />
+
         <!-- Advertisement / Promotion block -->
         <common-ad-wrapper-block
           date=date
