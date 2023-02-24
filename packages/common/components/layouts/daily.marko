@@ -35,6 +35,8 @@ $ const layout = get(req, "query.layout") || "daily";
     <@body style="padding:0; margin:0;font-family: 'Roboto', Arial, sans-serif; -webkit-text-size-adjust:100%;">
       <common-body-wrapper-block newsletter=newsletter date=date>
         <@body>
+          <common-last-weeks-most-popular-list-block section-name="Last Weeks Top 5" date=date tenant="randallreilly" realm="5fce561dd28860bc33b823ce" />
+          <common-last-weeks-most-popular-list-block section-name="Last Months Top 5" days=30 date=date tenant="randallreilly" realm="5fce561dd28860bc33b823ce" />
           <!-- Announcement block -->
           <common-content-background-block
             date=date

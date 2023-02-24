@@ -1,0 +1,76 @@
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+import queryFragment from "@randall-reilly/package-common/graphql/fragments/content-list";
+import fetch from "node-fetch";
+
+$ const {
+  sectionName,
+  date,
+  newsletter,
+  tenant,
+  realm,
+  includeContentTypes,
+} = input;
+
+$ const days = defaultValue(input.days, 7);
+$ const withImage = defaultValue(input.withImage, false);
+$ const imagePosition = defaultValue(input.imagePosition, 'right');
+$ const withHeader = defaultValue(input.withHeader, false);
+$ const withSection = defaultValue(input.withSection, true);
+$ const continueReading = defaultValue(input.continueReading, false);
+$ const urlParams = defaultValue(input.urlParams, false);
+
+
+$ const { site, config, apollo, req } = out.global;
+
+$ const now = new Date(date);
+$ const publishedAfter = new Date(now - (days * 24 * 60 * 60 * 1000));
+$ const queryParams = {
+  limit: 100,
+  ...(includeContentTypes && { includeContentTypes }),
+  publishedAfter,
+  sort: { field: 'published', order: 'asc'},
+  queryFragment,
+};
+
+$ const { MOST_POPULAR_API_URI } = process.env;
+$ const getMostPopular = async (ids) => {
+  const uri = 'http://host.docker.internal:37934'; //MOST_POPULAR_API_URI || 'https://most-popular-content.base.parameter1.com';
+
+  const url = `${uri}/retrieve?tenant=${tenant}&realm=${realm}&includeIds=${ids.join(',')}`;
+  const res = await fetch(url);
+  const json = await res.json();
+  if (!res.ok) {
+    const e = json.message || res.statusText;
+    throw new Error(e || "An unknown fatal error occurred.");
+  }
+  return json.data;
+};
+
+<marko-web-query|{ nodes }| name="all-published-content" params=queryParams>
+  $ const nodeMap = {};
+  $ const ids = [];
+  $ nodes.forEach((node) => {
+    const { id } = node;
+    ids.push(id);
+    nodeMap[id] = node;
+  });
+  <marko-web-resolve|{ resolved }| promise=getMostPopular(ids)>
+    $ const ordered = resolved.map((item) => {
+        const { id } = item;
+        return nodeMap[id];
+    });
+    <if(sectionName)>
+      <common-list-header-element title=sectionName />
+    </if>
+    <for|content| of=ordered.slice(0,6)>
+      <common-content-list-item-block
+        content=content
+        with-section=withSection
+        with-image=withImage
+        image-position=imagePosition
+        continue-reading=continueReading
+        url-params=urlParams
+      />
+    </for>
+  </marko-web-resolve>
+</marko-web-query>
