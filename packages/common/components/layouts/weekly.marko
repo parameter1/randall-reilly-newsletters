@@ -45,7 +45,7 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           newsletter=newsletter
           promotion-component="sponsored-block"
           ad-unit=emailX.getAdUnit({ name: "sponsor", alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.sponsor`)
+          placement-id=nativeX.getPlacement({ name: 'sponsor', aliases: [newsletter.alias] }).id
         />
 
         <!--Lead story block-->
@@ -67,7 +67,7 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[0], alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.${adSlots[0]}`)
+          placement-id=nativeX.getPlacement({ name: adSlots[0], aliases: [newsletter.alias] }).id
         />
 
         <!-- Content list block (no image) -->
@@ -90,7 +90,7 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[1], alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.${adSlots[1]}`)
+          placement-id=nativeX.getPlacement({ name: adSlots[1], aliases: [newsletter.alias] }).id
         />
 
         <!-- Content list block (no image) -->
@@ -113,7 +113,7 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[2], alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.${adSlots[2]}`)
+          placement-id=nativeX.getPlacement({ name: adSlots[2], aliases: [newsletter.alias] }).id
         />
 
         <!-- Content list block (no image) -->
@@ -143,7 +143,7 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: adSlots[3], alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.${adSlots[3]}`)
+          placement-id=nativeX.getPlacement({ name: adSlots[3], aliases: [newsletter.alias] }).id
         />
 
         <!-- Content list block (no image) -->
@@ -189,7 +189,7 @@ $ const urlParams = (utmTerm) ? { "utm_term" : utmTerm } : false;
           section-name="Featured Resources"
           newsletter=newsletter
           promotion-component="native-block"
-          placement-id=get(nativeX, `placements.${newsletter.alias}.featured-resources`)
+          placement-id=nativeX.getPlacement({ name: 'featured-resources', aliases: [newsletter.alias] }).id
         />
       </@body>
     </common-body-wrapper-block>

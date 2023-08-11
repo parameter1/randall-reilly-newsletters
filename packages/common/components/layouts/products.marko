@@ -26,7 +26,7 @@ $ const nativeX = config.getAsObject("nativeX");
           newsletter=newsletter
           promotion-component="sponsored-block"
           ad-unit=emailX.getAdUnit({ name: "sponsor", alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.sponsor`)
+          placement-id=nativeX.getPlacement({ name: 'sponsor', aliases: [newsletter.alias] }).id
         />
 
         <!--Lead story block-->
@@ -46,8 +46,8 @@ $ const nativeX = config.getAsObject("nativeX");
           section-name="Fixed A"
           newsletter=newsletter
           promotion-component="advertisement-block"
-            ad-unit=emailX.getAdUnit({ name: "fixed-a", alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.fixed-a`)
+          ad-unit=emailX.getAdUnit({ name: "fixed-a", alias: newsletter.alias })
+          placement-id=nativeX.getPlacement({ name: 'fixed-a', aliases: [newsletter.alias] }).id
         />
 
         <!-- Content list block (no image) -->
@@ -68,7 +68,7 @@ $ const nativeX = config.getAsObject("nativeX");
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: "fixed-b", alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.fixed-b`)
+          placement-id=nativeX.getPlacement({ name: 'fixed-b', aliases: [newsletter.alias] }).id
         />
 
         <!-- Content list block (no image) -->
@@ -89,7 +89,7 @@ $ const nativeX = config.getAsObject("nativeX");
           newsletter=newsletter
           promotion-component="advertisement-block"
           ad-unit=emailX.getAdUnit({ name: "fixed-c", alias: newsletter.alias })
-          placement-id=get(nativeX, `placements.${newsletter.alias}.fixed-c`)
+          placement-id=nativeX.getPlacement({ name: 'fixed-c', aliases: [newsletter.alias] }).id
         />
 
         <!-- Content list block (no image) -->
