@@ -1,5 +1,5 @@
 module.exports = {
-  uri: 'https://randallreilly.native-x.parameter1.com',
+  uri: 'https://randallreilly.native-x.parameter1.com/email-placement',
   placements: {
     'ccj-breaking-news': {
       sponsor: '5fd27367b192ef0001843f84',
