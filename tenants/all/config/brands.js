@@ -132,8 +132,8 @@ module.exports = {
     logoSrc: '/files/base/randallreilly/all/image/static/ct/ct-logo-white.png',
     subscribeLink: '',
     contactLinks: [
-      { href: '', label: 'Advertising' },
-      { href: '', label: 'Editorial' },
+      { href: 'https://www.cleantrucking.com/page/advertise', label: 'Advertising' },
+      { href: 'https://www.cleantrucking.com/page/contact-us', label: 'Editorial' },
     ],
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
