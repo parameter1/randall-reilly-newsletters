@@ -127,4 +127,22 @@ module.exports = {
       ],
     },
   },
+  ct: {
+    brandName: 'Clean Trucking',
+    logoSrc: '/files/base/randallreilly/all/image/static/ct/ct-logo-white.png',
+    subscribeLink: '',
+    contactLinks: [
+      { href: '', label: 'Advertising' },
+      { href: '', label: 'Editorial' },
+    ],
+    socialMedia: {
+      imagePath: '/files/base/randallreilly/all/image/static/newsletter',
+      links: [
+        { provider: 'facebook', href: '', target: '_blank' },
+        { provider: 'twitter', href: '', target: '_blank' },
+        { provider: 'linkedin', href: '', target: '_blank' },
+        { provider: 'youtube', href: '', target: '_blank' },
+      ],
+    },
+  },
 };
