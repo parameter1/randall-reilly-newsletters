@@ -148,6 +148,11 @@ const config = {
     name: 'CONEXPO Special Report',
     ...brands.eqw,
   },
+  'clean-trucking': {
+    name: 'Clean Trucking',
+    unsubscribeLink: '',
+    ...brands.ct,
+  },
 };
 
 module.exports = config;
