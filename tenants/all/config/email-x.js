@@ -1102,6 +1102,39 @@ config
       width: 300,
       height: 250,
     },
+  ])
+
+  .setAdUnits('clean-trucking', [
+    {
+      name: 'sponsor',
+      id: '65241ff98e99c99143368299',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-a',
+      id: '6524200b8e99c9c8353682ac',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-b',
+      id: '652420208e99c9cf563682c8',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-c',
+      id: '6524202f41222b574578e0ef',
+      width: 300,
+      height: 250,
+    },
+    {
+      name: 'rotation-d',
+      id: '6524204041222b773478e10b',
+      width: 300,
+      height: 250,
+    },
   ]);
 
 module.exports = config;

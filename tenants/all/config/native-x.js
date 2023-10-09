@@ -269,5 +269,13 @@ module.exports = {
       'featured-resources': '63b798a031101300014f8132',
       'partner-insights': '63b798a851d38c00018ad9a2',
     },
+    'clean-trucking': {
+      sponsor: '652420918ecf8f0001a6f90b',
+      'rotation-a': '6524209ccb69630001479832',
+      'rotation-b': '652420a6173cf800013f9788',
+      'rotation-c': '652420b1795b4b0001a28e4b',
+      'rotation-d': '652420bccb69630001479843',
+      'featured-resources': '652420c9173cf800013f9796',
+    },
   },
 };
