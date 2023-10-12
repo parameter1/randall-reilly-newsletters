@@ -149,7 +149,7 @@ const config = {
     ...brands.eqw,
   },
   'clean-trucking': {
-    name: 'Clean Trucking',
+    name: "Today's news for tomorrow's trucks",
     unsubscribeLink: '',
     ...brands.ct,
   },
