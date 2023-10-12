@@ -130,7 +130,7 @@ module.exports = {
   ct: {
     brandName: 'Clean Trucking',
     logoSrc: '/files/base/randallreilly/all/image/static/ct/ct-logo-white.png',
-    subscribeLink: '',
+    subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=CT_nlsignup',
     contactLinks: [
       { href: 'https://www.cleantrucking.com/page/advertise', label: 'Advertising' },
       { href: 'https://www.cleantrucking.com/page/contact-us', label: 'Editorial' },
