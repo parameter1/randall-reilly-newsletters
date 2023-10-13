@@ -127,4 +127,19 @@ module.exports = {
       ],
     },
   },
+  ct: {
+    brandName: 'Clean Trucking',
+    logoSrc: '/files/base/randallreilly/all/image/static/ct/ct-logo-white.png',
+    subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=CT_nlsignup',
+    contactLinks: [
+      { href: 'https://www.cleantrucking.com/page/advertise', label: 'Advertising' },
+      { href: 'https://www.cleantrucking.com/page/contact-us', label: 'Editorial' },
+    ],
+    socialMedia: {
+      imagePath: '/files/base/randallreilly/all/image/static/newsletter',
+      links: [
+        { provider: 'youtube', href: 'https://www.youtube.com/channel/UC55CJCUhEdHwOcQ_A4c9U9g', target: '_blank' },
+      ],
+    },
+  },
 };
