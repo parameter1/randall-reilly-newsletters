@@ -138,10 +138,7 @@ module.exports = {
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
       links: [
-        { provider: 'facebook', href: '', target: '_blank' },
-        { provider: 'twitter', href: '', target: '_blank' },
-        { provider: 'linkedin', href: '', target: '_blank' },
-        { provider: 'youtube', href: '', target: '_blank' },
+        { provider: 'youtube', href: 'https://www.youtube.com/channel/UC55CJCUhEdHwOcQ_A4c9U9g', target: '_blank' },
       ],
     },
   },
