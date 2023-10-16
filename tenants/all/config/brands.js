@@ -138,7 +138,10 @@ module.exports = {
     socialMedia: {
       imagePath: '/files/base/randallreilly/all/image/static/newsletter',
       links: [
-        { provider: 'youtube', href: 'https://www.youtube.com/channel/UC55CJCUhEdHwOcQ_A4c9U9g', target: '_blank' },
+        { provider: 'facebook', href: 'https://www.facebook.com/CleanTruckingNews/', target: '_blank' },
+        { provider: 'twitter', href: 'https://twitter.com/cleantrucknews', target: '_blank' },
+        { provider: 'instagram', href: 'https://www.instagram.com/cleantrucking/', target: '_blank' },
+        { provider: 'youtube', href: 'https://www.youtube.com/playlist?list=PLPNPtn8aKWxCxzoCTZet6mKGaoctLL7wU', target: '_blank' },
       ],
     },
   },
