@@ -3,6 +3,7 @@ module.exports = {
     brandName: 'Commercial Carrier Journal',
     logoSrc: '/files/base/randallreilly/all/image/static/ccj/ccj-white-logo.png',
     subscribeLink: 'https://randallreilly.dragonforms.com/loading.do?omedasite=ccj_subscriptions',
+    unsubscribeLink: 'https://sample.dragonforms.com/loading.do?omedasite=CCJ_prefcntr&r=@{encrypted_customer_id}@',
     contactLinks: [
       { href: 'https://www.ccjdigital.com/page/advertise', label: 'Advertising' },
       { href: 'https://www.ccjdigital.com/page/contact-us', label: 'Editorial' },

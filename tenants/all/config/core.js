@@ -17,12 +17,10 @@ const config = {
   'ccj-daily': {
     name: 'Daily Report',
     weekendName: 'Weekend Edition',
-    unsubscribeLink: 'https://sample.dragonforms.com/loading.do?omedasite=CCJ_prefcntr&r=@{encrypted_customer_id}@',
     ...brands.ccj,
   },
   'ccj-equipment-weekly': {
     name: 'Equipment Weekly',
-    unsubscribeLink: 'https://sample.dragonforms.com/loading.do?omedasite=CCJ_prefcntr&r=@{encrypted_customer_id}@',
     ...brands.ccj,
   },
   'ccj-final-mile': {
@@ -35,7 +33,6 @@ const config = {
   },
   'ccj-regulatory-rundown': {
     name: 'Regulatory Rundown',
-    unsubscribeLink: 'https://sample.dragonforms.com/loading.do?omedasite=CCJ_prefcntr&r=@{encrypted_customer_id}@',
     ...brands.ccj,
   },
   'ccj-safety-tech': {
@@ -44,12 +41,10 @@ const config = {
   },
   'ccj-technology-weekly': {
     name: 'Technology Weekly',
-    unsubscribeLink: 'https://sample.dragonforms.com/loading.do?omedasite=CCJ_prefcntr&r=@{encrypted_customer_id}@',
     ...brands.ccj,
   },
   'ccj-weekend-edition': {
     name: 'Weekend Edition',
-    unsubscribeLink: 'https://sample.dragonforms.com/loading.do?omedasite=CCJ_prefcntr&r=@{encrypted_customer_id}@',
     ...brands.ccj,
   },
   'eqw-better-roads': {
