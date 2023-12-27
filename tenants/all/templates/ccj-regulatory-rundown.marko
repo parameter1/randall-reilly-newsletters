@@ -1,1 +1,7 @@
-<common-weekly-layout data=data />
+$ const { newsletter, date } = data;
+
+<common-weekly-layout data=data>
+  <@footer>
+    <common-ccj-footer-block date=date newsletter=newsletter />
+  </@footer>
+</common-weekly-layout>
