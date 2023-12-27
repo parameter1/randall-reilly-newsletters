@@ -1,1 +1,7 @@
-<common-breaking-news-layout data=data />
+$ const { newsletter, date } = data;
+
+<common-breaking-news-layout data=data>
+  <@footer>
+    <common-ccj-footer-block date=date newsletter=newsletter />
+  </@footer>
+</common-breaking-news-layout>

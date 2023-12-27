@@ -17,5 +17,8 @@
   },
   "<common-view-online-block>": {
     "template": "./view-online.marko"
+  },
+  "<common-ccj-footer-block>": {
+    "template": "./ccj-footer.marko"
   }
 }
