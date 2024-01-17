@@ -52,7 +52,14 @@ $ const sponsoredTagStyle = {
       </if>
       <else-if(withSection)>
         <tr>
-          <td align="left" valign="top" style=tagStyle>${get(content, "primarySection.name")}</td>
+          <td align="left" valign="top" style=tagStyle>
+            $ const name = get(content, "primarySection.name");
+            $ const secNameToName = {
+              "White Papers": 'Partner Insights',
+            };
+            $ const label = secNameToName[name] ? secNameToName[name] : name;
+            ${label}
+          </td>
         </tr>
       </else-if>
 
