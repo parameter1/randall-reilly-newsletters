@@ -20,7 +20,7 @@ $ const promotionComponents = {
 $ const PromotionComponent = promotionComponents[defaultValue(input.promotionComponent, "advertisement-block")];
 
 <if(nativeX.uri && placementId)>
-  <core-native-x-fetch|{ data }| uri=nativeX.uri date=date placement-id=placementId>
+  <core-native-x-fetch|{ data, tenant }| uri=nativeX.uri date=date placement-id=placementId>
     <if(data)>
       <!-- $ const lcvDefaultValue = get(data, "advertiser.name"); -->
       $ const dpmArgs = {
@@ -36,6 +36,8 @@ $ const PromotionComponent = promotionComponents[defaultValue(input.promotionCom
         section-name=sectionName
         content=convertAdToContent(data, { sectionName })
         dpm-args=dpmArgs
+        tenant=tenant
+        creative-id=get(data, "creative.mindfulCreativeId")
       />
     </if>
     <else-if(adUnit)>
