@@ -3,7 +3,8 @@ import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 import { URLSearchParams } from "url";
 
 $ const { content, urlParams } = input;
-
+$ const creativeId = get(input, "mindfulCreativeId");
+$ const tenant = get(input, "mindfulTenant");
 $ const withImage = defaultValue(input.withImage, false);
 $ const imagePosition = defaultValue(input.imagePosition, 'right');
 $ const withSection = defaultValue(input.withSection, true);
@@ -38,6 +39,14 @@ $ const sponsoredTagStyle = {
   ...tagStyle,
   "color": "#a91b20",
 }
+
+$ const linkAttrs = {
+  ...(getAsObject(input, "link.attrs")),
+  ...(creativeId && { 'data-mindful-creative-id': creativeId }),
+  ...(tenant && { 'data-mindful-tenant': tenant }),
+};
+
+$ const imgLinkAttrs = { style: imgLinkStyles, ...linkAttrs };
 
 <tr>
   <td align="center" valign="top">
@@ -77,7 +86,7 @@ $ const sponsoredTagStyle = {
                 class="img_resize1"
                 attrs={ border: 0, width: 610, align: "center", vspace: 5, style: imgStyles }
               >
-                <@link href=contentUrl target="_blank" attrs={ style: imgLinkStyles } />
+                <@link href=contentUrl target="_blank" attrs=imgLinkAttrs />
               </marko-newsletter-imgix>
             </marko-core-obj-value>
           </td>
@@ -94,7 +103,7 @@ $ const sponsoredTagStyle = {
                   <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="pad" style="padding: 0 30px 0px 0;">
                     <tr>
                       <td align="left" valign="top">
-                        <a style="font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;" class="font1" href=contentUrl>
+                        <a style="font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;" class="font1" href=contentUrl ...linkAttrs>
                           ${content.name}
                         </a>
                       </td>
@@ -110,7 +119,7 @@ $ const sponsoredTagStyle = {
                           </tr>
                           <if(continueReading)>
                             <common-table-spacer-element height="9" />
-                            <common-cta-element link-url=contentUrl />
+                            <common-cta-element link-url=contentUrl mindful-creative-id=creativeId />
                           </if>
                         </table>
                       </td>
@@ -126,7 +135,7 @@ $ const sponsoredTagStyle = {
                       class="img_resize2"
                       attrs={ border: 0, width: 200, height: 133, style: imgStyles }
                     >
-                      <@link href=contentUrl target="_blank" attrs={ style: imgLinkStyles } />
+                      <@link href=contentUrl target="_blank" attrs=imgLinkAttrs />
                     </marko-newsletter-imgix>
                   </marko-core-obj-value>
                 </td>
@@ -145,7 +154,7 @@ $ const sponsoredTagStyle = {
               </tr>
               <if(continueReading)>
                 <common-table-spacer-element height="9" />
-                <common-cta-element link-url=contentUrl />
+                <common-cta-element link-url=contentUrl mindful-creative-id=creativeId />
               </if>
             </table>
           </td>
@@ -154,7 +163,7 @@ $ const sponsoredTagStyle = {
       <else>
         <tr>
           <td align="left" valign="top">
-            <a style="font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;" href=contentUrl>
+            <a style="font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;" href=contentUrl ...linkAttrs>
               ${content.name}
             </a>
           </td>
@@ -167,7 +176,7 @@ $ const sponsoredTagStyle = {
         </tr>
         <if(continueReading)>
           <common-table-spacer-element height="9" />
-          <common-cta-element link-url=contentUrl />
+          <common-cta-element link-url=contentUrl mindful-creative-id=creativeId />
         </if>
       </else>
       <common-table-spacer-element height="32" />

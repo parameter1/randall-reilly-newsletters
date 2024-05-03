@@ -1,6 +1,8 @@
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+import { get, getAsObject } from "@parameter1/base-cms-object-path";
 
 $ const { linkUrl } = input;
+$ const creativeId = get(input, "mindfulCreativeId");
 $ const linkText = defaultValue(input.linkText, 'Continue Reading');
 
 $ const linkStyle = {
@@ -12,8 +14,14 @@ $ const linkStyle = {
   ...input.linkStyle,
 };
 
+$ const linkAttrs = {
+  ...getAsObject(input, 'link-attrs'),
+  ...(creativeId && { 'data-mindful-creative-id': creativeId }),
+};
+
 <common-link-element
   link-text="Continue Reading"
   link-url=linkUrl
   link-style=linkStyle
+  link-attrs=linkAttrs
 />

@@ -1,20 +1,35 @@
 import { get, getAsObject } from "@parameter1/base-cms-object-path";
+
 $ const { req } = out.global;
+
+$ const creativeId = get(input, "creativeId");
+$ const tenant = get(input, "tenant");
 $ const nativeAdLayout = get(req, "query.native-ad-layout");
 $ const newsletter = getAsObject(input, "newsletter");
 $ const { sectionName, date, content, dpmArgs } = input;
 $ const url = get(content, "siteContext.path");
 $ const company = getAsObject(content, "company");
+
 $ const imgStyles = {
   "font-size": "14px",
   "line-height": 0,
   "border": 0,
 };
+
 $ const imgLinkStyles = {
   "display": "block",
   "font-size": "14px",
   "line-height": 0,
 }
+
+$ const linkAttrs = {
+  ...(getAsObject(input, "link.attrs")),
+  ...(creativeId && { 'data-mindful-creative-id': creativeId }),
+  ...(tenant && { 'data-mindful-tenant': tenant }),
+};
+
+$ const imgLinkAttrs = { style: imgLinkStyles, ...linkAttrs };
+
 <if(nativeAdLayout === 'a')>
   <tr>
     <td align="center" valign="top">
@@ -37,7 +52,7 @@ $ const imgLinkStyles = {
                         options={ w: 540, h: 360, fit: "crop", auto: "format,compress" }
                         attrs={ border: 0, width: 270, style: imgStyles }
                       >
-                        <@link href=url target="_blank" attrs={ style: imgLinkStyles } />
+                        <@link href=url target="_blank" attrs=imgLinkAttrs />
                       </marko-newsletter-imgix>
                       <if(dpmArgs)>
                         <marko-newsletters-omail-dpm ...dpmArgs />
@@ -48,7 +63,7 @@ $ const imgLinkStyles = {
                     <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
                       <tr>
                         <td align="left" valign="top" style="font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;padding:0 24px 0 0;">
-                          <a href=url target="_blank" style="font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;">${content.name}</a>
+                          <a href=url target="_blank" style="font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;" ...linkAttrs>${content.name}</a>
                           <if(dpmArgs)>
                             <marko-newsletters-omail-dpm ...dpmArgs />
                           </if>
@@ -132,7 +147,7 @@ $ const imgLinkStyles = {
                         options={ w: 540, h: 360, fit: "crop", auto: "format,compress" }
                         attrs={ border: 0, width: 270, style: imgStyles }
                       >
-                        <@link href=url target="_blank" attrs={ style: imgLinkStyles } />
+                        <@link href=url target="_blank" attrs=imgLinkAttrs />
                       </marko-newsletter-imgix>
                       <if(dpmArgs)>
                         <marko-newsletters-omail-dpm ...dpmArgs />
@@ -150,7 +165,7 @@ $ const imgLinkStyles = {
                               options={ w: 180, h: 80, fit: "fill", auto: "format,compress" }
                               attrs={ border: 0, width: 90, style: imgStyles }
                             >
-                              <@link href=url target="_blank" attrs={ style: imgLinkStyles } />
+                              <@link href=url target="_blank" attrs=imgLinkAttrs />
                             </marko-newsletter-imgix>
                             <if(dpmArgs)>
                               <marko-newsletters-omail-dpm ...dpmArgs />
@@ -165,7 +180,7 @@ $ const imgLinkStyles = {
                       <common-table-spacer-element height="9" />
                       <tr>
                         <td align="left" valign="top" style="font-size: 17px;line-height: 22px;color: #3475b6;font-weight: 400;">
-                          <a href=url target="_blank" style="color: #68686a;text-decoration: none;">
+                          <a href=url target="_blank" style="color: #68686a;text-decoration: none;" ...linkAttrs>
                             <table>
                               <tr>
                                 <td style="-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; border: solid 2px #68686a;padding: 6px 12px;">
@@ -213,7 +228,7 @@ $ const imgLinkStyles = {
                         options={ w: 540, h: 360, fit: "crop", auto: "format,compress" }
                         attrs={ border: 0, width: 270, style: imgStyles }
                       >
-                        <@link href=url target="_blank" attrs={ style: imgLinkStyles } />
+                        <@link href=url target="_blank" attrs=imgLinkAttrs />
                       </marko-newsletter-imgix>
                       <if(dpmArgs)>
                         <marko-newsletters-omail-dpm ...dpmArgs />
@@ -231,7 +246,7 @@ $ const imgLinkStyles = {
                               options={ w: 180, h: 80, fit: "fill", auto: "format,compress" }
                               attrs={ border: 0, width: 90, style: imgStyles }
                             >
-                              <@link href=url target="_blank" attrs={ style: imgLinkStyles } />
+                              <@link href=url target="_blank" attrs=imgLinkAttrs />
                             </marko-newsletter-imgix>
                             <if(dpmArgs)>
                               <marko-newsletters-omail-dpm ...dpmArgs />
@@ -246,7 +261,7 @@ $ const imgLinkStyles = {
                       <common-table-spacer-element height="9" />
                       <tr>
                         <td align="left" valign="top" style="font-size: 17px;line-height: 22px;color: #3475b6;font-weight: 400;">
-                          <a href=url target="_blank" style="text-decoration: none;color: #3475b6;padding:0 24px 0 0;">${content.name}</a>
+                          <a href=url target="_blank" style="text-decoration: none;color: #3475b6;padding:0 24px 0 0;" ...linkAttrs>${content.name}</a>
                           <if(dpmArgs)>
                             <marko-newsletters-omail-dpm ...dpmArgs />
                           </if>
