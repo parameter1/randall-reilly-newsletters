@@ -25,7 +25,7 @@ x-env-defaults: &env
   EMAILX_SERVE_URI: ${EMAILX_SERVE_URI-https://randallreilly.serve.email-x.parameter1.com}
 
 x-env-leonis: &env-leonis
-  GRAPHQL_URI: ${GRAPHQL_URI-https://leonis.graphql.base.parameter1.com}
+  GRAPHQL_URI: ${GRAPHQL_URI-https://graphql.leonis.base-staging.parameter1.com/}
 
 x-env-virgon: &env-virgon
   GRAPHQL_URI: ${GRAPHQL_URI-https://virgon.graphql.base.parameter1.com}
@@ -58,6 +58,20 @@ services:
     ports:
       - "22290:80"
       - "32290:32290"
+
+  talent:
+    <<: *newsletter-cmd
+    working_dir: /root/tenants/talent
+    environment:
+      <<: *env
+      <<: *env-leonis
+      PORT: 80
+      EXPOSED_PORT: 22291
+      LIVERELOAD_PORT: 32291
+      TENANT_KEY: randallreilly_talent
+    ports:
+      - "22291:80"
+      - "32291:32291"
 
 volumes:
   yarn-cache: {}
