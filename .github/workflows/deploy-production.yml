@@ -86,6 +86,7 @@ jobs:
       matrix:
         tenant:
           - all
+          - talent
     steps:
       - uses: actions/checkout@v2
       - name: Log in to ECR
@@ -111,6 +112,7 @@ jobs:
           - virgon-newsletters
         tenant:
           - all
+          - talent
     steps:
       - name: Deploy to Kubernetes
         run: |
